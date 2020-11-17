@@ -109,7 +109,7 @@
 
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2020-11-16</lastmod>
+    <lastmod>2020-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -117,28 +117,28 @@
   
   <url>
     <loc>http://yoursite.com/tags/Hexo/</loc>
-    <lastmod>2020-11-16</lastmod>
+    <lastmod>2020-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/Typora/</loc>
-    <lastmod>2020-11-16</lastmod>
+    <lastmod>2020-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/Linux/</loc>
-    <lastmod>2020-11-16</lastmod>
+    <lastmod>2020-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/ERROR/</loc>
-    <lastmod>2020-11-16</lastmod>
+    <lastmod>2020-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
