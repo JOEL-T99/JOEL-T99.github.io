@@ -39,13 +39,13 @@
   </entry>
   
   <entry>
-    <title>Linux（七）linux编程</title>
-    <link href="http://yoursite.com/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89linux%E7%BC%96%E7%A8%8B/"/>
-    <id>http://yoursite.com/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89linux%E7%BC%96%E7%A8%8B/</id>
+    <title>Linux（七）GCC编译</title>
+    <link href="http://yoursite.com/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/"/>
+    <id>http://yoursite.com/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/</id>
     <published>2020-11-20T05:12:09.000Z</published>
-    <updated>2020-11-20T05:14:07.452Z</updated>
+    <updated>2020-11-20T13:44:28.686Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="GCC编译器"><a href="#GCC编译器" class="headerlink" title="GCC编译器"></a>GCC编译器</h1><h2 id="编译器简介"><a href="#编译器简介" class="headerlink" title="编译器简介"></a>编译器简介</h2><p>GCC（GNU Compiler Collection，GNU编译器套件）是由GNU开发的编译器。</p><p>支持多种语言，譬如C、C++、 Objective-C、 Fortran、Java、Ada以及Go等。</p><p>支持多个平台，是Linux系统最常用的编译器。</p><p>支持跨平台交叉编译（在本地编译的程序，可以运行在其他平台之上）。</p><h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2>]]></content>
     
     
       
