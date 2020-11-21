@@ -1,11 +1,13 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux（六）磁盘管理 | JOEL-T99</title><meta name="keywords" content="Linux"><meta name="author" content="JOEL-T99"><meta name="copyright" content="JOEL-T99"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="article">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux（六）磁盘管理 | JOEL-T99</title><meta name="keywords" content="Linux"><meta name="author" content="JOEL-T99"><meta name="copyright" content="JOEL-T99"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="查看磁盘磁盘的命名规则 硬盘命名格式：&#x2F;dev&#x2F;xxy xx 表示硬盘类型 sd SCSI SATA USB 接口类型 hd IDE y 取值范围a-z，表示该磁盘事使用此类型接口第几块硬盘  示例： &#x2F;dev&#x2F;hdd   表示第4个使用IDE接口的磁盘 &#x2F;dev&#x2F;sdb   表示第2个使用SCSI SATA或者USB接口的磁盘   硬盘的分区概念 硬盘分区：主分区、扩展分区、逻辑分区 1.主分区">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Linux（六）磁盘管理">
 <meta property="og:url" content="http://yoursite.com/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="JOEL-T99">
+<meta property="og:description" content="查看磁盘磁盘的命名规则 硬盘命名格式：&#x2F;dev&#x2F;xxy xx 表示硬盘类型 sd SCSI SATA USB 接口类型 hd IDE y 取值范围a-z，表示该磁盘事使用此类型接口第几块硬盘  示例： &#x2F;dev&#x2F;hdd   表示第4个使用IDE接口的磁盘 &#x2F;dev&#x2F;sdb   表示第2个使用SCSI SATA或者USB接口的磁盘   硬盘的分区概念 硬盘分区：主分区、扩展分区、逻辑分区 1.主分区">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg">
 <meta property="article:published_time" content="2020-11-20T05:11:27.000Z">
-<meta property="article:modified_time" content="2020-11-20T05:13:56.066Z">
+<meta property="article:modified_time" content="2020-11-21T04:27:13.693Z">
 <meta property="article:author" content="JOEL-T99">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -76,8 +78,8 @@ var saveToLocal = {
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2020-11-20 13:13:56'
+  isToc: true,
+  postUpdate: '2020-11-21 12:27:13'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -143,7 +145,256 @@ if (asideStatus !== undefined) {
      document.documentElement.classList.remove('hide-aside')
    }
 }})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="JOEL-T99" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/background.jpg" onerror="onerror=null;src='/img/touxiang.png'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JOEL-T99</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">Linux（六）磁盘管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-11-20T05:11:27.000Z" title="Created 2020-11-20 13:11:27">2020-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-11-20T05:13:56.066Z" title="Updated 2020-11-20 13:13:56">2020-11-20</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">Comments:</span><a href="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Linux（七）GCC编译</div></div></a></div><div class="next-post pull-right"><a href="/2020/11/20/Linux%EF%BC%88%E4%BA%94%EF%BC%89%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Linux（五）网络管理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/11/03/Linux（三）用户管理/" title="Linux（三）用户管理"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-03</div><div class="title">Linux（三）用户管理</div></div></a></div><div><a href="/2020/11/13/Linux（四）RPM & YUM/" title="Linux（四）RPM & YUM"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-13</div><div class="title">Linux（四）RPM & YUM</div></div></a></div><div><a href="/2020/11/12/YUM-报错解决：rpmdb/" title="YUM 报错解决：rpmdb"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Error.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-12</div><div class="title">YUM 报错解决：rpmdb</div></div></a></div><div><a href="/2020/10/24/Linux（一）文件管理/" title="Linux（一）文件管理"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-24</div><div class="title">Linux（一）文件管理</div></div></a></div><div><a href="/2020/10/25/Linux（二）Shell编程/" title="Linux（二）Shell编程"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-25</div><div class="title">Linux（二）Shell编程</div></div></a></div><div><a href="/2020/11/20/Linux（五）网络管理/" title="Linux（五）网络管理"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-20</div><div class="title">Linux（五）网络管理</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/background.jpg" onerror="this.onerror=null;this.src='/img/touxiang.png'" alt="avatar"/><div class="author-info__name">JOEL-T99</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JOEL-T99"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JOEL-T99" target="_blank" title="Github"><i class="fa fa-github"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">感谢访问本站，若喜欢请收藏 ^_^</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E5%85%AB%EF%BC%89%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Linux（八）进程管理"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（八）进程管理"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E5%85%AB%EF%BC%89%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Linux（八）进程管理">Linux（八）进程管理</a><time datetime="2020-11-20T05:12:52.000Z" title="Created 2020-11-20 13:12:52">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/" title="Linux（七）GCC编译"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（七）GCC编译"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/" title="Linux（七）GCC编译">Linux（七）GCC编译</a><time datetime="2020-11-20T05:12:09.000Z" title="Created 2020-11-20 13:12:09">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="Linux（六）磁盘管理"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（六）磁盘管理"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="Linux（六）磁盘管理">Linux（六）磁盘管理</a><time datetime="2020-11-20T05:11:27.000Z" title="Created 2020-11-20 13:11:27">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E4%BA%94%EF%BC%89%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" title="Linux（五）网络管理"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（五）网络管理"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E4%BA%94%EF%BC%89%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" title="Linux（五）网络管理">Linux（五）网络管理</a><time datetime="2020-11-20T05:09:02.000Z" title="Created 2020-11-20 13:09:02">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/Hexo-Typora-%E5%86%99%E5%87%BA%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/" title="Hexo &amp; Typora 写出彩色字体"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Typora.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Hexo &amp; Typora 写出彩色字体"/></a><div class="content"><a class="title" href="/2020/11/13/Hexo-Typora-%E5%86%99%E5%87%BA%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/" title="Hexo &amp; Typora 写出彩色字体">Hexo &amp; Typora 写出彩色字体</a><time datetime="2020-11-13T09:50:24.000Z" title="Created 2020-11-13 17:50:24">2020-11-13</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/index.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By JOEL-T99</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="http://joel-t99.online/">Blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadValine () {
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/background.jpg" onerror="onerror=null;src='/img/touxiang.png'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JOEL-T99</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">Linux（六）磁盘管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-11-20T05:11:27.000Z" title="Created 2020-11-20 13:11:27">2020-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-11-21T04:27:13.693Z" title="Updated 2020-11-21 12:27:13">2020-11-21</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">Comments:</span><a href="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="查看磁盘"><a href="#查看磁盘" class="headerlink" title="查看磁盘"></a>查看磁盘</h1><h2 id="磁盘的命名规则"><a href="#磁盘的命名规则" class="headerlink" title="磁盘的命名规则"></a>磁盘的命名规则</h2><ul>
+<li><p><strong>硬盘命名格式：</strong><code>/dev/xxy</code></p>
+<p><code>xx</code> 表示硬盘类型</p>
+<p><code>sd</code> SCSI SATA USB 接口类型</p>
+<p><code>hd</code> IDE</p>
+<p><code>y</code> 取值范围a-z，表示该磁盘事使用此类型接口第几块硬盘</p>
+</li>
+<li><p><strong>示例：</strong></p>
+<p><code>/dev/hdd</code>   表示第4个使用IDE接口的磁盘</p>
+<p><code>/dev/sdb</code>   表示第2个使用SCSI SATA或者USB接口的磁盘</p>
+</li>
+</ul>
+<h2 id="硬盘的分区概念"><a href="#硬盘的分区概念" class="headerlink" title="硬盘的分区概念"></a>硬盘的分区概念</h2><ul>
+<li><p>硬盘分区：主分区、扩展分区、逻辑分区</p>
+<p>1.主分区+扩展分区总共不能超过4个</p>
+<p>2.扩展分区不能直接使用，只做为逻辑分区的容器</p>
+<p>3.一个硬盘主分区至少有1个，最多4个，扩展分区可以没有，最多1个</p>
+<p>4.分出主分区后，其余的部分可以分成扩展分区</p>
+<p>5.扩展分区不能直接使用，必须分成若干逻辑分区</p>
+</li>
+</ul>
+<div class="note info simple"><p>硬盘的容量＝主分区的容量＋扩展分区的容量 扩展分区的容量＝各个逻辑分区的容量之和</p>
+</div>
+
+
+
+<h2 id="硬盘分区的命名概念"><a href="#硬盘分区的命名概念" class="headerlink" title="硬盘分区的命名概念"></a>硬盘分区的命名概念</h2><ul>
+<li><p><strong>硬盘分区命名格式：</strong><code>/dev/xxyn</code></p>
+<p><code>n</code> 表示分区，取值如下：</p>
+<p>1-4      主分区或扩展分区</p>
+<p>5以后   逻辑分区</p>
+</li>
+<li><p><strong>示例：</strong></p>
+<p><code>/dev/hda3</code>   表示在第1个IDE硬盘上的第3个主分区或者扩展分区</p>
+<p><code>/dev/sdb6</code>   表示第2个使用SCSI硬盘上的第2个逻辑分区</p>
+</li>
+</ul>
+<h2 id="查看磁盘命令"><a href="#查看磁盘命令" class="headerlink" title="查看磁盘命令"></a>查看磁盘命令</h2><ul>
+<li><p><strong>fdisk</strong></p>
+<p>命令格式：  <code>fdisk  [选项]   [硬盘名/分区名]</code></p>
+<p>功能描述：是 Linux 的磁盘分区表操作工具</p>
+<p>​                    <code>-I</code> ：列出硬盘分区信息</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>df</strong></p>
+<p>英文词组：disk free</p>
+<p>命令格式：  <code>df  [选项]   [文件或目录]</code></p>
+<p>功能描述： 查看系统的磁盘空间占用情况</p>
+<p>​                    <code>-a</code>  列出所有的文件系统</p>
+<p>​                    <code>-h</code>  以GBytes, MBytes, KBytes 显示文件系统</p>
+<p>​                    <code>-T</code>  显示文件系统类型</p>
+<p>​                    <code>-k</code>  以 KBytes 的容量显示各文件系统</p>
+<p>​                    <code>-m</code>  以 MBytes 的容量显示各文件系统</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>du</strong></p>
+<p>英文词组：disk usage </p>
+<p>命令格式：  <code>du  [选项]   [文件或目录]</code></p>
+<p>功能描述： 查看文件和目录磁盘使用的空间</p>
+<p><code>-a</code>  列出所有文件与目录容量</p>
+<p><code>-h</code>  以(G/M) G/M) 容量格式显示</p>
+<p><code>-s</code>  列出总量</p>
+<p><code>-S</code>  不包括子目录下的总计</p>
+<p><code>-k</code>  以 KBytes 列出容量显示</p>
+<p><code>-m</code>  以 MBytes 列出容量显示</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><p>Linux Kernel可以支持10多种文件系统类型，常见类型：文件系统</p>
+<p>（1）扩展文件系统 （Ext File System）</p>
+<p>（2）ext4 （Fourth Extended File system）</p>
+<p>（3）Reiser    日志文件系统</p>
+<p>（4）XFS    高级日志文件系统</p>
+<p>（5）ISO9660    标准CD-l ROM文件系统</p>
+<p>（6）NFS  （Network File System）</p>
+<p>除了上面这些Linux文件系统外，Linux还可以支持基于Windows和Netware的文件系统，如MSDOS、VFAT、HPFS、SMB和NTFS等。</p>
+<p>详情链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xiaoyi23000/article/details/51345179">https://blog.csdn.net/xiaoyi23000/article/details/51345179</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h1><h2 id="硬盘分区"><a href="#硬盘分区" class="headerlink" title="硬盘分区"></a>硬盘分区</h2><ul>
+<li><p><strong>fdisk</strong></p>
+<p>命令格式参考上文</p>
+<p>命令参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>切换分区是否为启动分区</td>
+</tr>
+<tr>
+<td>b</td>
+<td>编辑bsd卷标</td>
+</tr>
+<tr>
+<td>c</td>
+<td>切换分区是否为DOS兼容分区</td>
+</tr>
+<tr>
+<td>d</td>
+<td>删除分区</td>
+</tr>
+<tr>
+<td>l</td>
+<td>打印linux支持的分区类型</td>
+</tr>
+<tr>
+<td>m</td>
+<td>打印fdisk帮助信息</td>
+</tr>
+<tr>
+<td>n</td>
+<td>新增分区</td>
+</tr>
+<tr>
+<td>o</td>
+<td>创建空白的DOS分区表</td>
+</tr>
+<tr>
+<td>p</td>
+<td>打印该磁盘的分区表</td>
+</tr>
+<tr>
+<td>q</td>
+<td>不保存直接退出</td>
+</tr>
+<tr>
+<td>s</td>
+<td>创建一个空的Sun分区表</td>
+</tr>
+<tr>
+<td>t</td>
+<td>改变分区的类型号码</td>
+</tr>
+<tr>
+<td>u</td>
+<td>改变分区大小的显示方式</td>
+</tr>
+<tr>
+<td>v</td>
+<td>检验磁盘的分区列表</td>
+</tr>
+<tr>
+<td>w</td>
+<td>保存结果并退出</td>
+</tr>
+<tr>
+<td>x</td>
+<td>进入专家模式</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="分区格式化"><a href="#分区格式化" class="headerlink" title="分区格式化"></a>分区格式化</h2><ul>
+<li><p><strong>mkfs</strong></p>
+<p>英文词组：make filesystem</p>
+<p>命令格式：  <code>mkfs  [ -V ] [ -t  fstype ] Device</code>    或    <code>mkfs.fstype  Device</code></p>
+<p>功能描述：  对硬盘分区格式化</p>
+<p><code>-V</code>  显示mkfs的版本信息</p>
+<p><code>-t fstype</code>  用来指定创建的文件系统类型，不加此选项时，使用系统缺省的文件系统类型</p>
+<p><code>Device</code>  要格式化的磁盘或者磁盘分区</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Example1:将分区&#x2F;dev&#x2F;sdb1格式化为xfs文件系统格式</span><br><span class="line">mkfs -t xfs &#x2F;dev&#x2F;sdb1</span><br><span class="line">Example:将逻辑分区&#x2F;dev&#x2F;sdb5格式化为ext4文件系统格式</span><br><span class="line">mkfs.ext4 &#x2F;dev&#x2F;sdb5</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="手动挂载分区"><a href="#手动挂载分区" class="headerlink" title="手动挂载分区"></a>手动挂载分区</h2><ul>
+<li><p><strong>mount</strong></p>
+<p>命令格式：  <code>mount  [选项]  设备名  挂载点</code></p>
+<p>功能描述： 磁盘挂载</p>
+<p><code>                    -t</code>  文件系统，省略时则使用分区默认的文件系统类型</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">将分区&#x2F;dev&#x2F;sdb1挂载到 &#x2F;mnt&#x2F;sdb1目录：</span><br><span class="line">&#x2F;mnt&#x2F;sdb1则为&#x2F;dev&#x2F;sdb1的挂载点</span><br><span class="line">[root@localhost mnt]#mount &#x2F;dev&#x2F;sdb1 sdb1</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<div class="note info simple"><p>磁盘分区必须先挂载，才能使用</p>
+<p>挂载时需要指定挂载的设备和挂载目录（这个目录称为挂载点）</p>
+</div>
+
+
+
+<h2 id="分区的卸载"><a href="#分区的卸载" class="headerlink" title="分区的卸载"></a>分区的卸载</h2><ul>
+<li><p><strong>umount</strong></p>
+<p>命令格式：  <code>umount  设备名 或 挂载点</code></p>
+<p>功能描述： 磁盘卸载</p>
+</li>
+</ul>
+<div class="note info simple"><p>卸载分区时当前目录不能是挂载点，否则无法卸载</p>
+</div>
+
+
+
+
+
+<h2 id="硬盘的自动挂载"><a href="#硬盘的自动挂载" class="headerlink" title="硬盘的自动挂载"></a>硬盘的自动挂载</h2><p>方法：按格式将分区信息增加到/etc/fstab文件，重启系统</p>
+<p>/etc/fstab文件的每一行，表示一个磁盘分区，且遵循以下格式：</p>
+<p><code>&lt;device&gt;   &lt;dir&gt;   &lt;type&gt;   &lt;options&gt;   &lt;dump&gt;   &lt;pass&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>device</td>
+<td>加载的磁盘分区或设备，使用UUID 或 分区名称表示</td>
+</tr>
+<tr>
+<td>dir</td>
+<td>挂载点的路径</td>
+</tr>
+<tr>
+<td>type</td>
+<td>指定文件系统的类型，如xfs，ext4等</td>
+</tr>
+<tr>
+<td>options</td>
+<td>指定挂载的选项，默认为defaults   ro   wr</td>
+</tr>
+<tr>
+<td>dump</td>
+<td>表示该挂载后的文件系统能否被dump备份，0表示不能，1表示每天都进行dump备份，2表示不定期进行dump操作</td>
+</tr>
+<tr>
+<td>pass</td>
+<td>表示开机过程中是否校验扇区；0表示不要校验，1表示优先校验（一般为根目录），2表示为在1级别校验完后再进行校验</td>
+</tr>
+</tbody></table>
+<div class="note info simple"><p>UUID是 通用唯一识别码（Universally Unique Identifier）的缩写，可以使用 <code>blkid</code> 命令查询，否则无法卸载</p>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+<div align="center">❤️&nbspEND&nbsp❤️</div>
+
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Linux（七）GCC编译</div></div></a></div><div class="next-post pull-right"><a href="/2020/11/20/Linux%EF%BC%88%E4%BA%94%EF%BC%89%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Linux（五）网络管理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/11/03/Linux（三）用户管理/" title="Linux（三）用户管理"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-03</div><div class="title">Linux（三）用户管理</div></div></a></div><div><a href="/2020/11/13/Linux（四）RPM & YUM/" title="Linux（四）RPM & YUM"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-13</div><div class="title">Linux（四）RPM & YUM</div></div></a></div><div><a href="/2020/11/12/YUM-报错解决：rpmdb/" title="YUM 报错解决：rpmdb"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Error.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-12</div><div class="title">YUM 报错解决：rpmdb</div></div></a></div><div><a href="/2020/10/24/Linux（一）文件管理/" title="Linux（一）文件管理"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-24</div><div class="title">Linux（一）文件管理</div></div></a></div><div><a href="/2020/10/25/Linux（二）Shell编程/" title="Linux（二）Shell编程"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-25</div><div class="title">Linux（二）Shell编程</div></div></a></div><div><a href="/2020/11/20/Linux（五）网络管理/" title="Linux（五）网络管理"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-20</div><div class="title">Linux（五）网络管理</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/background.jpg" onerror="this.onerror=null;this.src='/img/touxiang.png'" alt="avatar"/><div class="author-info__name">JOEL-T99</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JOEL-T99"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JOEL-T99" target="_blank" title="Github"><i class="fa fa-github"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">感谢访问本站，若喜欢请收藏 ^_^</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98"><span class="toc-number">1.</span> <span class="toc-text">查看磁盘</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">1.1.</span> <span class="toc-text">磁盘的命名规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E7%9B%98%E7%9A%84%E5%88%86%E5%8C%BA%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">硬盘的分区概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA%E7%9A%84%E5%91%BD%E5%90%8D%E6%A6%82%E5%BF%B5"><span class="toc-number">1.3.</span> <span class="toc-text">硬盘分区的命名概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E5%91%BD%E4%BB%A4"><span class="toc-number">1.4.</span> <span class="toc-text">查看磁盘命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.</span> <span class="toc-text">文件系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">磁盘管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">硬盘分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8C%BA%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">3.2.</span> <span class="toc-text">分区格式化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E6%8C%82%E8%BD%BD%E5%88%86%E5%8C%BA"><span class="toc-number">3.3.</span> <span class="toc-text">手动挂载分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8C%BA%E7%9A%84%E5%8D%B8%E8%BD%BD"><span class="toc-number">3.4.</span> <span class="toc-text">分区的卸载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E7%9B%98%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="toc-number">3.5.</span> <span class="toc-text">硬盘的自动挂载</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E5%85%AB%EF%BC%89%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Linux（八）进程管理"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（八）进程管理"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E5%85%AB%EF%BC%89%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Linux（八）进程管理">Linux（八）进程管理</a><time datetime="2020-11-20T05:12:52.000Z" title="Created 2020-11-20 13:12:52">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/" title="Linux（七）GCC编译"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（七）GCC编译"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E4%B8%83%EF%BC%89GCC%E7%BC%96%E8%AF%91/" title="Linux（七）GCC编译">Linux（七）GCC编译</a><time datetime="2020-11-20T05:12:09.000Z" title="Created 2020-11-20 13:12:09">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="Linux（六）磁盘管理"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（六）磁盘管理"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E5%85%AD%EF%BC%89%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="Linux（六）磁盘管理">Linux（六）磁盘管理</a><time datetime="2020-11-20T05:11:27.000Z" title="Created 2020-11-20 13:11:27">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/20/Linux%EF%BC%88%E4%BA%94%EF%BC%89%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" title="Linux（五）网络管理"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Linux1.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Linux（五）网络管理"/></a><div class="content"><a class="title" href="/2020/11/20/Linux%EF%BC%88%E4%BA%94%EF%BC%89%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" title="Linux（五）网络管理">Linux（五）网络管理</a><time datetime="2020-11-20T05:09:02.000Z" title="Created 2020-11-20 13:09:02">2020-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/Hexo-Typora-%E5%86%99%E5%87%BA%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/" title="Hexo &amp; Typora 写出彩色字体"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/Typora.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="Hexo &amp; Typora 写出彩色字体"/></a><div class="content"><a class="title" href="/2020/11/13/Hexo-Typora-%E5%86%99%E5%87%BA%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/" title="Hexo &amp; Typora 写出彩色字体">Hexo &amp; Typora 写出彩色字体</a><time datetime="2020-11-13T09:50:24.000Z" title="Created 2020-11-13 17:50:24">2020-11-13</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/index.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By JOEL-T99</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="http://joel-t99.online/">Blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadValine () {
   function initValine () {
     let initData = {
       el: '#vcomment',
