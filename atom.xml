@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-11-20T05:13:45.686Z</updated>
+  <updated>2020-11-21T04:53:13.889Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo &amp; Typora Tabs使用</title>
+    <link href="http://yoursite.com/2020/11/21/Hexo-Typora-Tabs%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2020/11/21/Hexo-Typora-Tabs%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-11-21T04:35:22.000Z</published>
+    <updated>2020-11-21T04:53:13.889Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>语法格式：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- tab [Tab caption] [@icon] --&gt;</span></span></span><br><span class="line">Any content (support inline tags too).</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- endtab --&gt;</span></span></span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">Unique name   : Unique name of tabs block tag without comma.</span><br><span class="line"><span class="code">                Will be used in #id&#x27;s as prefix for each tab with their index numbers.</span></span><br><span class="line"><span class="code">                If there are whitespaces in name, for generate #id all whitespaces will replaced by dashes.</span></span><br><span class="line"><span class="code">                Only for current url of post/page must be unique!</span></span><br><span class="line"><span class="code">[index]       : Index number of active tab.</span></span><br><span class="line"><span class="code">                If not specified, first tab (1) will be selected.</span></span><br><span class="line"><span class="code">                If index is -1, no tab will be selected. It&#x27;s will be something like spoiler.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br><span class="line"><span class="code">[Tab caption] : Caption of current tab.</span></span><br><span class="line"><span class="code">                If not caption specified, unique name with tab index suffix will be used as caption of tab.</span></span><br><span class="line"><span class="code">                If not caption specified, but specified icon, caption will empty.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br><span class="line"><span class="code">[@icon]       : FontAwesome icon name (full-name, look like &#x27;fas fa-font&#x27;)</span></span><br><span class="line"><span class="code">                Can be specified with or without space; e.g. &#x27;Tab caption @icon&#x27; similar to &#x27;Tab caption@icon&#x27;.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+    <category term="Typora" scheme="http://yoursite.com/tags/Typora/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux（八）进程管理</title>
