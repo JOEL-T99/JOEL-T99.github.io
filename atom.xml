@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-11-26T04:07:27.978Z</updated>
+  <updated>2021-01-11T12:14:51.675Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL（一）基础命令</title>
+    <link href="http://yoursite.com/2021/01/11/MySQL%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2021/01/11/MySQL%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-01-11T10:52:14.000Z</published>
+    <updated>2021-01-11T12:14:51.675Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li>CMD打开方式：<code>mysql -u root -p</code></li></ul><h1 id="MySQL的基本命令"><a href="#MySQL的基本命令" class="headerlink" title="MySQL的基本命令"></a>MySQL的基本命令</h1><h3 id="数据库命令"><a href="#数据库命令" class="headerlink" title="数据库命令"></a>数据库命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#查看数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">#创建数据库</span><br><span class="line">create database [if not exists] &#96;数据库名&#96;;</span><br><span class="line"></span><br><span class="line">#删除数据库</span><br><span class="line">drop database [if exists] &#96;数据库名&#96;;</span><br><span class="line"></span><br><span class="line">#使用数据库</span><br><span class="line">use &#96;数据库名&#96;;</span><br><span class="line"></span><br><span class="line">#查看数据库存储引擎</span><br><span class="line">show engines;</span><br></pre></td></tr></table></figure><h3 id="表命令"><a href="#表命令" class="headerlink" title="表命令"></a>表命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#创建表</span><br><span class="line">create table [if not exists] &#96;表名&#96;(</span><br><span class="line">&#96;字段1&#96; &#96;列类型[属性][索引][注释]&#96;,</span><br><span class="line">&#96;字段2&#96; &#96;列类型[属性][索引][注释]&#96; </span><br><span class="line">)charset &#x3D;utf8;</span><br><span class="line"></span><br><span class="line">#删除表</span><br><span class="line">drop table [if exists] &#96;表名&#96;;</span><br><span class="line"></span><br><span class="line">#查表</span><br><span class="line">#反单引（&#96;&#96;）标注该关键字是表或字段</span><br><span class="line">select * from &#96;表名&#96;;</span><br><span class="line"></span><br><span class="line"># 示例 #################################</span><br><span class="line">CREATE TABLE  IF NOT EXISTS student(</span><br><span class="line">stuNo INT(4) PRIMARY KEY COMMENT,</span><br><span class="line">stuName VARCHAR(20) NOT NULL,</span><br><span class="line">stuSex CHAR(2) NOT NULL,</span><br><span class="line">stuAge INT(3) NOT NULL,</span><br><span class="line">stuAddress VARCHAR(200),</span><br><span class="line">gradeId INT(4) NOT NULL</span><br><span class="line">)CHARSET &#x3D;utf8;</span><br></pre></td></tr></table></figure><ul><li>列类型分类</li></ul><table><thead><tr><th align="center">类型</th><th align="center">说明</th><th align="center">备注</th></tr></thead><tbody><tr><td align="center">int</td><td align="center">标准整数</td><td align="center">无</td></tr><tr><td align="center">char[(M)]</td><td align="center">固定长度字符串</td><td align="center">0&lt;=M&lt;=255</td></tr><tr><td align="center">varchar[(M)]</td><td align="center">可变字符串</td><td align="center">0&lt;=M&lt;=65535</td></tr><tr><td align="center">datatime</td><td align="center">YY-MM-DD hh:mm:ss</td><td align="center">23:59:59</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux（九）服务器配置</title>
     <link href="http://yoursite.com/2020/11/26/Linux%EF%BC%88%E4%B9%9D%EF%BC%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2020/11/26/Linux%EF%BC%88%E4%B9%9D%EF%BC%89%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</id>
     <published>2020-11-26T04:07:27.000Z</published>
-    <updated>2020-11-26T04:07:27.978Z</updated>
+    <updated>2021-01-11T10:53:55.005Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
     
@@ -33,6 +55,8 @@
     
     
     
+    
+    <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
