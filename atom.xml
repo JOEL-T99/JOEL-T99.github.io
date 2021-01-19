@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-18T15:06:01.796Z</updated>
+  <updated>2021-01-19T07:36:52.770Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA（二）类/方法</title>
+    <link href="http://yoursite.com/2021/01/19/JAVA%EF%BC%88%E4%BA%8C%EF%BC%89%E7%B1%BB-%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2021/01/19/JAVA%EF%BC%88%E4%BA%8C%EF%BC%89%E7%B1%BB-%E6%96%B9%E6%B3%95/</id>
+    <published>2021-01-19T06:59:15.000Z</published>
+    <updated>2021-01-19T07:36:52.770Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><h3 id="类-1"><a href="#类-1" class="headerlink" title="类"></a>类</h3><p><strong>抽象数据类型：</strong>将不同类型数据的集合组成一个整体用来描述一种新的食物。</p><p>类定义了一种抽象数据类型，不止定义了抽象数据类型组成（成员变量），同时还定义了该类型可以实施的操作（方法）。</p><h3 id="定义类"><a href="#定义类" class="headerlink" title="定义类"></a>定义类</h3><ul><li><p>定义一个类</p><p>类是一种引用（抽象）数据类型，<strong>类为对象的模版</strong>。</p><p>累的含义包括“成员变量”的定义和“方法”的定义。</p></li><li><p>定义类的方法</p></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">  修饰符  返回值类型  方法名称（参数列表）&#123;</span><br><span class="line">    方法体</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="创建并使用对象"><a href="#创建并使用对象" class="headerlink" title="创建并使用对象"></a>创建并使用对象</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--使用<span class="keyword">new</span>关键字创建对象</span><br><span class="line">     Cell           c      =     <span class="keyword">new</span>         Cell();</span><br><span class="line">   引用类型     引用类型变量     创建（实例化）    构造方法</span><br></pre></td></tr></table></figure><h3 id="引用类型变量"><a href="#引用类型变量" class="headerlink" title="引用类型变量"></a>引用类型变量</h3><p>为了能够对实例化的对象进行访问，需要一个特殊的变量，即引用</p><p>引用类型变量可以存储该对象的地址信息，通常称为“指向改对象”，当一个引用类型变量只想该类的对象，就可以通过这个变量对对象访问。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Emp e1 = <span class="keyword">new</span> Emp();</span><br><span class="line">Emp e2 = e1;</span><br><span class="line">e1.name = <span class="string">&quot;张三&quot;</span>;</span><br><span class="line">e2.name = <span class="string">&quot;王五&quot;</span>;</span><br><span class="line">System.out.printlm(e1.name);</span><br><span class="line"><span class="comment">//输出为“王五”</span></span><br><span class="line"><span class="comment">//e1与e2同时存放并指向同一个变量，e1对该变量赋之后，e2又对该变量重新赋值</span></span><br></pre></td></tr></table></figure><h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><p><strong>方法的签名：</strong>方法名和参数列表</p><p>Java语法定义：一个类中不可以有两个方法签名完全相同的方法，但是如果一个类的两个方法只是方法名相同而参数列表不同，这就是方法的重载。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">abc(<span class="keyword">int</span> a)&#123;...&#125;</span><br><span class="line">abc(String name)&#123;...&#125;</span><br><span class="line">abc(<span class="keyword">double</span> a,<span class="keyword">int</span> b)&#123;...&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编译时根据签名绑定调用方法</span></span><br></pre></td></tr></table></figure><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p><strong>构造方法是类中定义的方法</strong>，但不同于其他方法。</p><p>–构造方法的名称必须是和类名相同</p><p>–构造方法没有返回值，也不能写<code>void</code></p><p>语法：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 类型名()&#123;</span><br><span class="line">  方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>通过构造方法初始化成员变量</p><p>Java语法中的构造方法常常用于实现对对象成员白娘初始化</p></li><li><p>this关键字的使用</p><p>this关键字用在方法体中，用于指代调用该方法的当前对象。</p><p>简单说：哪个对象用方法，this指的就是哪个对象</p></li><li><p>默认的构造方法</p><p>Java语法规定，任何一个类都必须含有构造方法，加入源程序没有定义构造方法，则编译器在编译时会为其添加一个无参的空结构（默认构造方法）。一旦定义了构造方法，默认的构造将不再生成。</p></li><li><p>构造方法的重载</p><p>很多时候，为了方便，可以对一个类定义多个构造方法，这些构造方法都有相同的名称（类名），称之为构造方法的重载。</p></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">45</span>,<span class="number">67</span>,<span class="number">25</span>,<span class="number">86</span>&#125;</span><br><span class="line">Cell c = <span class="keyword">new</span> Cell[]&#123;</span><br><span class="line">  <span class="keyword">new</span> Cell(<span class="number">25</span>,<span class="number">56</span>);</span><br><span class="line">  <span class="keyword">new</span> Cell(<span class="number">41</span>,<span class="number">65</span>);</span><br><span class="line">  <span class="keyword">new</span> Cell(<span class="number">12</span>,<span class="number">46</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Soso</title>
