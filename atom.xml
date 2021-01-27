@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-01-27T11:42:30.360Z</updated>
+  <updated>2021-01-27T12:26:54.631Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JAVA（十四）IO操作</title>
+    <link href="http://yoursite.com/2021/01/27/JAVA%EF%BC%88%E5%8D%81%E5%9B%9B%EF%BC%89IO%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2021/01/27/JAVA%EF%BC%88%E5%8D%81%E5%9B%9B%EF%BC%89IO%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-01-27T11:46:22.000Z</published>
+    <updated>2021-01-27T12:26:54.631Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="基本IO操作"><a href="#基本IO操作" class="headerlink" title="基本IO操作"></a>基本IO操作</h1><h2 id="InputStream-OutputStream"><a href="#InputStream-OutputStream" class="headerlink" title="InputStream / OutputStream"></a>InputStream / OutputStream</h2><h3 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h3><ul><li><p><strong>什么是输入：</strong>输入是一个从外界进入到程序的方向，通常我们需要“读取”外界的数据时，使用输入，所以输入是用来读取数据的。</p></li><li><p><strong>什么是输出：</strong>输出是一个从程序发送到外界的方向，通常我们需要“写出”数据到外界时，使用输出，所以输出是用来写出数据的。</p></li></ul><h3 id="节点流和处理流"><a href="#节点流和处理流" class="headerlink" title="节点流和处理流"></a>节点流和处理流</h3><p>按照流是否直接与特定的地方（如磁盘、内存、设备等）相连，分别为节点流和处理流。</p><ul><li><strong>节点流：</strong>可以从或向一个特定的地方（节点）读写数据。</li><li><strong>处理流：</strong>是对一个已经存在的流的连接和封装，通过所封装的功能调用实现数据读写。</li></ul><p>处理流的构造方法总是带一个其他的流对象做参数。一个流对象经过其他流的多次包装，称之为流的连接。</p><h3 id="其常用方法"><a href="#其常用方法" class="headerlink" title="其常用方法"></a>其常用方法</h3><p>InputStream是所有字节输入流的父类，其定义流基础的读取方法。</p><ul><li><p>常用的方法如下：</p><p>int read(); 读取一个字节，以int形式返回，该int的“低八位”有效，若返回值为-1则表示EOF。</p><p>int read(byte[] d); 尝试最多读取给定数组的length个字节并存入该数组，返回值为实际读取到的字节量。</p></li></ul><p>OutputStream是所有字节输出流的父类，其定义流基础的写出方法。</p><ul><li><p>常用的方法如下：</p><p>void write(int d); 写出一个字节，写的是给定的int的“低八位”。</p><p>void write(byte[] d); 将给定的字节数组中的所有字节全部写出。</p></li></ul><h2 id="文件流"><a href="#文件流" class="headerlink" title="文件流"></a>文件流</h2><h3 id="创建FOS对象（重写模式）"><a href="#创建FOS对象（重写模式）" class="headerlink" title="创建FOS对象（重写模式）"></a>创建FOS对象（重写模式）</h3><p>FileOutputStream是文件的字节输出流，我们使用该流可以以字节为单位将数据写入文件。</p><ul><li><p>其构造方法为：</p><p>FileOutputStream(File file); 创建一个指定File对象表示文件中写入数据的文件输出流。</p><p>FileOutputStream(String filename); 创建一个向具有指定名称的文件中写入数据的输出文件流。</p></li></ul><p>⚠️！注意：若指定的文件已经包含内容，那么当使用FOS对其写入数据时，会将该文件中原有的数据全部去除。</p><h3 id="创建FOS对象（追加模式）"><a href="#创建FOS对象（追加模式）" class="headerlink" title="创建FOS对象（追加模式）"></a>创建FOS对象（追加模式）</h3><p>若想在文件的原有数据之后追加新数据则需要以下构造方法创建FOS。</p><ul><li><p>其构造方法为：</p><p>FileOutputStream(String file, boolean append);  创建一个指定File对象表示的文件中写入数据文件输出流。</p><p>FileOutputStream(String filename, boolean append);  创建一个具有指定名称的文件中写入数据的输出文件流。</p></li></ul><p>⚠️！注意：以上两个构造方法中，第二个参数若为true，那么通过该FOS写出的数据都是在文件末尾追加的。</p><h3 id="创建FIS对象"><a href="#创建FIS对象" class="headerlink" title="创建FIS对象"></a>创建FIS对象</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JAVA（十三）文件操作-File</title>
     <link href="http://yoursite.com/2021/01/27/JAVA%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-File/"/>
     <id>http://yoursite.com/2021/01/27/JAVA%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-File/</id>
     <published>2021-01-27T03:41:25.000Z</published>
-    <updated>2021-01-27T11:42:30.360Z</updated>
+    <updated>2021-01-27T11:47:36.668Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="文件操作—File"><a href="#文件操作—File" class="headerlink" title="文件操作—File"></a>文件操作—File</h1><h2 id="File—文件"><a href="#File—文件" class="headerlink" title="File—文件"></a>File—文件</h2><p>java.io.File用于表示文件（目录），可以通过File类在程序上操作硬盘上的文件和目录。</p><p>File类只用于表示文件（目录）的信息（名称、大小），换句话说只能访问文件或目录的相关属性，不能对文件的内容进行访问。</p><h3 id="File-pathname"><a href="#File-pathname" class="headerlink" title="File(pathname)"></a>File(pathname)</h3><ul><li><p>File提供了较多的构造方法来创建实例，其中之一就是：</p><p>File(String pathname)</p></li></ul><p>通过将给定路径名字符串转换成抽象路径名来创建一个新File实例。</p><p>提示：抽象路径应尽量使用相对路径，并且目录的层级分隔符不要直接写“/”或“\”，应当使用File.separator这个常量表示，以避免不同系统带来的差异。</p><h3 id="File-parent-child"><a href="#File-parent-child" class="headerlink" title="File(parent, child)"></a>File(parent, child)</h3><ul><li><p>File的另一个构造方法：</p><p>File(File parent, String child);</p></li></ul><p>根据parent抽象路径名和child路径名字符串创建一个新的实例。</p><h3 id="isFile-方法"><a href="#isFile-方法" class="headerlink" title="isFile()方法"></a>isFile()方法</h3><p>File的isFile方法用于判断当前File对象表示的是否为一个文件。</p><ul><li>其语法结构为：long length();</li></ul><p>该方法返回的long值表示该文件所占有的字节量。</p><h3 id="exists方法"><a href="#exists方法" class="headerlink" title="exists方法"></a>exists方法</h3><p>File的exists方法用于判断此抽象路径名表示的文件或目录是否存在。</p><ul><li>其语法结构为：boolean exists();</li></ul><p>若该File表示的文件或目录存在则返回true，否则返回false。</p><h3 id="createNewFile方法"><a href="#createNewFile方法" class="headerlink" title="createNewFile方法"></a>createNewFile方法</h3><p>File的createNewFile方法用于当且仅当不存在具有此抽象路径名指定的名称的文件时，原地创建一个新文件。</p><ul><li>其语法结构为：boolean createNewFile();</li></ul><p>返回值：若果指定的文件不存在并成功的创建，则返回true；如果指定的文件已经存在，则返回false。</p><h3 id="delete方法"><a href="#delete方法" class="headerlink" title="delete方法"></a>delete方法</h3><p>File的delete方法用于删除此抽象路径名表示的文件或目录。</p><ul><li>其语法结构为：boolean delete();</li></ul><p>返回值：当且仅当成功删除文件或目录时，返回true；否则返回false。</p><p>⚠️！注意：若此File对象所表示的是一个目录时，在删除时需要保证此为空目录才可以成功删除（目录中不能含有任何子项）。</p><h2 id="File—目录"><a href="#File—目录" class="headerlink" title="File—目录"></a>File—目录</h2><h3 id="isDirectory-方法"><a href="#isDirectory-方法" class="headerlink" title="isDirectory()方法"></a>isDirectory()方法</h3><p>File的isDirectory方法用于判断当前File对象表示的是否为一个目录。</p><ul><li>其语法结构为：boolean isDirectory();</li></ul><p>返回值：若File对象表示的是一个目录，则返回true。</p><h3 id="mkdir方法"><a href="#mkdir方法" class="headerlink" title="mkdir方法"></a>mkdir方法</h3><p>File的mkdir方法用于创建此抽象路径名指定的目录。</p><ul><li>其语法结构为：boolean mkdir();</li></ul><p>返回值：当且仅当以创建目录时，返回true；否则返回false。</p><h3 id="mkdirs方法"><a href="#mkdirs方法" class="headerlink" title="mkdirs方法"></a>mkdirs方法</h3><p>File的mkdirs方法用于创建此抽象路径名指定的目录，包括所有必需但不存在的父目录。⚠️！此操作失败时也可能已经成功创建了一部分必需的父目录。</p><ul><li>其语法结构为：boolean mkdirs;</li></ul><p>返回值：当且仅当已创建目录及所有必需的父目录时，返回true；否则返回false。</p><h3 id="listFile方法"><a href="#listFile方法" class="headerlink" title="listFile方法"></a>listFile方法</h3><p>File的listFile方法用于返回一个抽象路径名数组，这些路径名表示此抽象路径名表示的目录中的文件。</p><ul><li>其语法结构为：File[] listFiles();</li></ul><p>返回值：抽象路径名数组，这些路径名表示此抽象路径名表示的目录中的文件和目录。如果目录为空，那么数组也将为空。如果抽象路径名不表示一个目录，或发生I/O错误，则返回null。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="文件操作—File"><a href="#文件操作—File" class="headerlink" title="文件操作—File"></a>文件操作—File</h1><h2 id="File—文件"><a href="#File—文件" class="headerlink" title="File—文件"></a>File—文件</h2><p>java.io.File用于表示文件（目录），可以通过File类在程序上操作硬盘上的文件和目录。</p><p>File类只用于表示文件（目录）的信息（名称、大小），换句话说只能访问文件或目录的相关属性，不能对文件的内容进行访问。</p><h3 id="File-pathname"><a href="#File-pathname" class="headerlink" title="File(pathname)"></a>File(pathname)</h3><ul><li>File提供了较多的构造方法来创建实例，其中之一就是：<code>File(String pathname);</code></li></ul><p>通过将给定路径名字符串转换成抽象路径名来创建一个新File实例。</p><p>提示：抽象路径应尽量使用相对路径，并且目录的层级分隔符不要直接写“/”或“\”，应当使用File.separator这个常量表示，以避免不同系统带来的差异。</p><h3 id="File-parent-child"><a href="#File-parent-child" class="headerlink" title="File(parent, child)"></a>File(parent, child)</h3><ul><li>File的另一个构造方法：<code>File(File parent, String child);</code></li></ul><p>根据parent抽象路径名和child路径名字符串创建一个新的实例。</p><h3 id="isFile-方法"><a href="#isFile-方法" class="headerlink" title="isFile()方法"></a>isFile()方法</h3><p>File的isFile方法用于判断当前File对象表示的是否为一个文件。</p><ul><li>其语法结构为：<code>long length();</code></li></ul><p>该方法返回的long值表示该文件所占有的字节量。</p><h3 id="exists方法"><a href="#exists方法" class="headerlink" title="exists方法"></a>exists方法</h3><p>File的exists方法用于判断此抽象路径名表示的文件或目录是否存在。</p><ul><li>其语法结构为：<code>boolean exists();</code></li></ul><p>若该File表示的文件或目录存在则返回true，否则返回false。</p><h3 id="createNewFile方法"><a href="#createNewFile方法" class="headerlink" title="createNewFile方法"></a>createNewFile方法</h3><p>File的createNewFile方法用于当且仅当不存在具有此抽象路径名指定的名称的文件时，原地创建一个新文件。</p><ul><li>其语法结构为：<code>boolean createNewFile();</code></li></ul><p>返回值：若果指定的文件不存在并成功的创建，则返回true；如果指定的文件已经存在，则返回false。</p><h3 id="delete方法"><a href="#delete方法" class="headerlink" title="delete方法"></a>delete方法</h3><p>File的delete方法用于删除此抽象路径名表示的文件或目录。</p><ul><li>其语法结构为：<code>boolean delete();</code></li></ul><p>返回值：当且仅当成功删除文件或目录时，返回true；否则返回false。</p><p>⚠️！注意：若此File对象所表示的是一个目录时，在删除时需要保证此为空目录才可以成功删除（目录中不能含有任何子项）。</p><h2 id="File—目录"><a href="#File—目录" class="headerlink" title="File—目录"></a>File—目录</h2><h3 id="isDirectory-方法"><a href="#isDirectory-方法" class="headerlink" title="isDirectory()方法"></a>isDirectory()方法</h3><p>File的isDirectory方法用于判断当前File对象表示的是否为一个目录。</p><ul><li>其语法结构为：<code>boolean isDirectory();</code></li></ul><p>返回值：若File对象表示的是一个目录，则返回true。</p><h3 id="mkdir方法"><a href="#mkdir方法" class="headerlink" title="mkdir方法"></a>mkdir方法</h3><p>File的mkdir方法用于创建此抽象路径名指定的目录。</p><ul><li>其语法结构为：<code>boolean mkdir();</code></li></ul><p>返回值：当且仅当以创建目录时，返回true；否则返回false。</p><h3 id="mkdirs方法"><a href="#mkdirs方法" class="headerlink" title="mkdirs方法"></a>mkdirs方法</h3><p>File的mkdirs方法用于创建此抽象路径名指定的目录，包括所有必需但不存在的父目录。⚠️！此操作失败时也可能已经成功创建了一部分必需的父目录。</p><ul><li>其语法结构为：<code>boolean mkdirs;</code></li></ul><p>返回值：当且仅当已创建目录及所有必需的父目录时，返回true；否则返回false。</p><h3 id="listFile方法"><a href="#listFile方法" class="headerlink" title="listFile方法"></a>listFile方法</h3><p>File的listFile方法用于返回一个抽象路径名数组，这些路径名表示此抽象路径名表示的目录中的文件。</p><ul><li>其语法结构为：<code>File[] listFiles();</code></li></ul><p>返回值：抽象路径名数组，这些路径名表示此抽象路径名表示的目录中的文件和目录。如果目录为空，那么数组也将为空。如果抽象路径名不表示一个目录，或发生I/O错误，则返回null。</p>]]></content>
     
     
       
@@ -433,28 +455,6 @@
     <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
     <category term="Typora" scheme="http://yoursite.com/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux（八）进程管理</title>
-    <link href="http://yoursite.com/2020/11/20/Linux%EF%BC%88%E5%85%AB%EF%BC%89%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
-    <id>http://yoursite.com/2020/11/20/Linux%EF%BC%88%E5%85%AB%EF%BC%89%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/</id>
-    <published>2020-11-20T05:12:52.000Z</published>
-    <updated>2020-11-20T05:13:45.686Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    
-    <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
