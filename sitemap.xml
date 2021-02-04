@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2021/01/21/JAVA%EF%BC%88%E5%85%AD%EF%BC%89static%20:%20final/</loc>
+    
+    <lastmod>2021-02-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/01/20/JAVA%EF%BC%88%E4%BA%94%EF%BC%89%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/</loc>
+    
+    <lastmod>2021-02-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/01/22/JAVA%EF%BC%88%E5%85%AB%EF%BC%89%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2021-02-03</lastmod>
@@ -114,21 +128,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2021/01/21/JAVA%EF%BC%88%E5%85%AD%EF%BC%89static%20:%20final/</loc>
-    
-    <lastmod>2021-01-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2021/01/20/JAVA%20%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2021-01-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2021/01/20/JAVA%EF%BC%88%E4%BA%94%EF%BC%89%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/</loc>
     
     <lastmod>2021-01-21</lastmod>
     
