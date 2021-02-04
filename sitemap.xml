@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/11/21/Hexo-Typora-Tabs%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2021-02-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/01/21/JAVA%EF%BC%88%E5%85%AD%EF%BC%89static%20:%20final/</loc>
     
     <lastmod>2021-02-04</lastmod>
@@ -173,13 +180,6 @@
     <loc>http://yoursite.com/2020/10/24/Linux%EF%BC%88%E4%B8%80%EF%BC%89%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</loc>
     
     <lastmod>2020-12-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/11/21/Hexo-Typora-Tabs%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2020-11-21</lastmod>
     
   </url>
   
