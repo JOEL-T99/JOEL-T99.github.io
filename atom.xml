@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-22T03:53:14.673Z</updated>
+  <updated>2021-03-22T04:15:33.766Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2021/03/22/JAVA%EF%BC%88%E5%8D%81%E4%B9%9D%EF%BC%89Dom4j/"/>
     <id>http://yoursite.com/2021/03/22/JAVA%EF%BC%88%E5%8D%81%E4%B9%9D%EF%BC%89Dom4j/</id>
     <published>2021-03-22T03:46:50.000Z</published>
-    <updated>2021-03-22T03:53:14.673Z</updated>
+    <updated>2021-03-22T04:15:33.766Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Dom4j介绍"><a href="#Dom4j介绍" class="headerlink" title="Dom4j介绍"></a>Dom4j介绍</h1>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="DOM4J介绍"><a href="#DOM4J介绍" class="headerlink" title="DOM4J介绍"></a>DOM4J介绍</h1><p>DOM4J是dom4j.org出品的一个开源的XML解析包。DOM4J应用于Java平台，采用lJava集合框架并完全支持DOM、SAX和JAXP。</p><p>DOM4J使用非常简单。只要了解基本的XML-DOM模型，就能使用。</p><p>Dom：把一个文档作为一个对象。</p><p>DOM4J最大的特点是使用大量的接口，他的主要接口都在org.dom4j里面定义。</p><table><thead><tr><th>接口名</th><th>定义</th></tr></thead><tbody><tr><td>Atribute</td><td>定义了XML的属性</td></tr><tr><td>Branch</td><td>指能够包含字节点的节点。如XML元素（Element）和文档（Document）定义了一个公共的行为</td></tr><tr><td>CDDATA</td><td>定义了XML CDATA区域</td></tr><tr><td>CharacterData</td><td>是一个标识接口，标识基于字符的节点。如CDATA、Comment、Text</td></tr><tr><td>Comment</td><td>定义了XML注释的行为</td></tr><tr><td>Document</td><td>定义了XML文档</td></tr><tr><td>DocumentType</td><td>定义了XML DOCTYPE声明</td></tr><tr><td>Element</td><td>定义了XML元素</td></tr><tr><td>ElementHandler</td><td>定义了Element对象的处理器</td></tr><tr><td>ElementPath</td><td>被ElementHandler使用，用于取得当前正在处理的路径层次信息</td></tr><tr><td>Entity</td><td>定义了XML Entity实例</td></tr><tr><td>Node</td><td>为dom4j中所有的XML节点定义了多态行为</td></tr><tr><td>NodeFilter</td><td>定义了在dom4j节点产生的一个滤镜或谓语的行为（predicate）</td></tr><tr><td>ProcessingInstruction</td><td>定义了XML处理指令</td></tr><tr><td>Text</td><td>定义； XML文本节点</td></tr><tr><td>Visitor</td><td>用于实现Visitor</td></tr><tr><td>XPath</td><td>在分析一个字符串后提供了一个XPath表达式</td></tr></tbody></table><p>各接口的继承关系如下：</p><ul><li>interface java.lang.Cloneable<ul><li>interface org.dom4j.**Node<ul><li> interface org.dom4j.Attribute</li><li>interface org.dom4j.Branch<ul><li>interface org.dom4j.Document</li><li> interface org.dom4j.Element</li></ul></li><li>interface org.dom4j.CharacterData<ul><li>interface org.dom4j.CDATA</li><li> interface org.dom4j.Comment</li><li>interface org.dom4j.Text</li></ul></li><li>interface org.dom4j.DocumentType</li><li>interface org.dom4j.Entity</li><li>interface org.dom4j.ProcessingInstruction</li></ul></li></ul></li></ul>]]></content>
     
     
       
