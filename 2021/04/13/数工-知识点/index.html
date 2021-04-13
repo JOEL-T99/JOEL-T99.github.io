@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数工 知识点 | JOEL-T99</title><meta name="keywords" content="-数工"><meta name="author" content="JOEL-T99"><meta name="copyright" content="JOEL-T99"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="计算机系统知识硬件知识计算机体系结构和主要部件地基本工作原理CPU和存储器地组成、性能、基本工作原理 常用I&#x2F;O设备、通信设备地性能，以及基本工作原理 I&#x2F;O接口地功能、类型和特点 CISC&#x2F;RISC，流水线操作，多处理机，并行处理 存储系统虚拟存储器基本工作原理，多级存储体系 RAID类型和特性 安全性、可靠性与系统性能评测基础知识诊断与容错 系统可靠性分析评价 计算机系统性能评测方法 数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数工 知识点">
+<meta property="og:url" content="http://yoursite.com/2021/04/13/%E6%95%B0%E5%B7%A5-%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+<meta property="og:site_name" content="JOEL-T99">
+<meta property="og:description" content="计算机系统知识硬件知识计算机体系结构和主要部件地基本工作原理CPU和存储器地组成、性能、基本工作原理 常用I&#x2F;O设备、通信设备地性能，以及基本工作原理 I&#x2F;O接口地功能、类型和特点 CISC&#x2F;RISC，流水线操作，多处理机，并行处理 存储系统虚拟存储器基本工作原理，多级存储体系 RAID类型和特性 安全性、可靠性与系统性能评测基础知识诊断与容错 系统可靠性分析评价 计算机系统性能评测方法 数据结构">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg">
+<meta property="article:published_time" content="2021-04-13T09:44:39.000Z">
+<meta property="article:modified_time" content="2021-04-13T10:06:11.562Z">
+<meta property="article:author" content="JOEL-T99">
+<meta property="article:tag" content="-数工">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg"><link rel="shortcut icon" href="/img/fav.ico"><link rel="canonical" href="http://yoursite.com/2021/04/13/%E6%95%B0%E5%B7%A5-%E7%9F%A5%E8%AF%86%E7%82%B9/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#00c4b6","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-13 18:06:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="JOEL-T99" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/background.jpg" onerror="onerror=null;src='/img/touxiang.png'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">41</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JOEL-T99</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">数工 知识点</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-04-13T09:44:39.000Z" title="Created 2021-04-13 17:44:39">2021-04-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-04-13T10:06:11.562Z" title="Updated 2021-04-13 18:06:11">2021-04-13</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">Comments:</span><a href="/2021/04/13/%E6%95%B0%E5%B7%A5-%E7%9F%A5%E8%AF%86%E7%82%B9/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2021/04/13/%E6%95%B0%E5%B7%A5-%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="计算机系统知识"><a href="#计算机系统知识" class="headerlink" title="计算机系统知识"></a>计算机系统知识</h1><h2 id="硬件知识"><a href="#硬件知识" class="headerlink" title="硬件知识"></a>硬件知识</h2><h3 id="计算机体系结构和主要部件地基本工作原理"><a href="#计算机体系结构和主要部件地基本工作原理" class="headerlink" title="计算机体系结构和主要部件地基本工作原理"></a>计算机体系结构和主要部件地基本工作原理</h3><p>CPU和存储器地组成、性能、基本工作原理</p>
+<p>常用I/O设备、通信设备地性能，以及基本工作原理</p>
+<p>I/O接口地功能、类型和特点</p>
+<p>CISC/RISC，流水线操作，多处理机，并行处理</p>
+<h3 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h3><p>虚拟存储器基本工作原理，多级存储体系</p>
+<p>RAID类型和特性</p>
+<h3 id="安全性、可靠性与系统性能评测基础知识"><a href="#安全性、可靠性与系统性能评测基础知识" class="headerlink" title="安全性、可靠性与系统性能评测基础知识"></a>安全性、可靠性与系统性能评测基础知识</h3><p>诊断与容错</p>
+<p>系统可靠性分析评价</p>
+<p>计算机系统性能评测方法</p>
+<h2 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><h3 id="常用数据结构"><a href="#常用数据结构" class="headerlink" title="常用数据结构"></a>常用数据结构</h3><p>数组（静态数组、动态数组）</p>
+<p>线性表、链表（单向链表、双向链表、循环链表）</p>
+<p>栈和队列</p>
+<p>树（二叉树、查找树、平衡树、遍历树、堆）、图、集合地定义、存储和操作</p>
+<p>Hash（存储位置计算、碰撞处理）</p>
+<h3 id="常用算法"><a href="#常用算法" class="headerlink" title="常用算法"></a>常用算法</h3><p>排序算法、查找算法、数值计算、字符串处理、数据压缩算法、递归算法、图地相关算法</p>
+<p>算法与数据结构的关系，算法效率，算法设计，算法描述（流程图、伪代码、决策表），算法的复杂性</p>
+<h2 id="软件知识"><a href="#软件知识" class="headerlink" title="软件知识"></a>软件知识</h2><h3 id="操作系统知识"><a href="#操作系统知识" class="headerlink" title="操作系统知识"></a>操作系统知识</h3><p>操作系统的类型、特征、地位、内核（中断控制）、进程、线程概念</p>
+<p>处理机管理（状态转换、同步与互斥、信号灯、分时轮转、抢占、死锁）</p>
+<p>存储管理（主存保护、动态连接分配、分段、分页、虚存）</p>
+<p>设备管理（I/O控制、假脱机、磁盘调度）</p>
+<p>文件管理（文件目录、文件地结构和组织、存取方法、存取控制、恢复处理、共享和安全）</p>
+<p>作业管理（作业调度、作业控制语言（JCL）、多道程序设计）</p>
+<p>汉字处理，多媒体处理，人机界面</p>
+<p>网络操作系统和嵌入式操作系统基础知识</p>
+<p>操作系统的配置</p>
+<h3 id="程序设计语言和语言处理程序地知识"><a href="#程序设计语言和语言处理程序地知识" class="headerlink" title="程序设计语言和语言处理程序地知识"></a>程序设计语言和语言处理程序地知识</h3><p>汇编、编译、解释系统地基础知识和基本工作原理</p>
+<p>程序设计语言地基本成分：数据、运算、控制和传输,程序调用地实现机制</p>
+<p>各类程序设计语言地主要特点和适用情况</p>
+<h2 id="计算机网络知识"><a href="#计算机网络知识" class="headerlink" title="计算机网络知识"></a>计算机网络知识</h2><p>网络体系结构（网络拓扑、OSI/RM、基本地网络协议）</p>
+<p>传输介质，传输技术，传输方法，传输控制</p>
+<p>常用网络设备和各类通信设备</p>
+<p>Client/Server结构、Browser/Server结构、Browser/Web/Datebase结构</p>
+<p>LAN拓扑，存取控制，LAN地组网，LAN间连接，LAN-WAN连接</p>
+<p>因特网基础知识及应用</p>
+<p>网络软件</p>
+<p>网络管理</p>
+<p>网络性能分析</p>
+<p>网络有关地法律、法规</p>
+<h1 id="数据库技术"><a href="#数据库技术" class="headerlink" title="数据库技术"></a>数据库技术</h1><h2 id="数据库技术基础"><a href="#数据库技术基础" class="headerlink" title="数据库技术基础"></a>数据库技术基础</h2><h3 id="数据库模型"><a href="#数据库模型" class="headerlink" title="数据库模型"></a>数据库模型</h3><p>数据库系统地三级模式（概念模式、外模式、内模式），两级映像（概念模式/外模式、外模式/内模式）</p>
+<p>数据库模型：数据模型地组成要素，概念数据模型ER图（实体、属性、关系），逻辑数据模型（关系模型、层次模型、网络模型）</p>
+<h3 id="数据库管理系统地功能和特征"><a href="#数据库管理系统地功能和特征" class="headerlink" title="数据库管理系统地功能和特征"></a>数据库管理系统地功能和特征</h3><p>主要功能（数据库定义、数据库操作、数据库控制、事务管理、用户视图）</p>
+<p>特征（确保数据独立性、数据库存取、同时执行过程、排它控制、故障恢复、安全性、完整性）</p>
+<p>RDB（关系数据库），OODB（面向对象数据库），ORDB（对象关系数据库），NDB（网状数据库）</p>
+<p>几种常用Web数据库的特点</p>
+<h3 id="数据库系统体系结构"><a href="#数据库系统体系结构" class="headerlink" title="数据库系统体系结构"></a>数据库系统体系结构</h3><p>集中式数据库系统</p>
+<p>Client/Server数据库系统</p>
+<p>并行数据库系统</p>
+<p>分布式数据库系统</p>
+<p>对象关系数据库系统</p>
+<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><h3 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h3><p>关系代数运算（并、交、差、笛卡儿积、选择、投影、连接、除）</p>
+<p>元组演算</p>
+<p>完整性约束</p>
+<h3 id="关系数据库标准语言（SQL）"><a href="#关系数据库标准语言（SQL）" class="headerlink" title="关系数据库标准语言（SQL）"></a>关系数据库标准语言（SQL）</h3><p>SQL地功能与特点</p>
+<p>用SQL进行数据定义（表、视图、索引、约束）</p>
+<p>用SQL进行数据操作（数据检索、数据插入/删除/更新、触发控制）</p>
+<p>安全性和授权</p>
+<p>程序中地API，嵌入SQL</p>
+<h2 id="数据库地控制功能"><a href="#数据库地控制功能" class="headerlink" title="数据库地控制功能"></a>数据库地控制功能</h2><p>数据库事务管理（ACID属性）</p>
+<p>数据库备份与恢复技术（UNDO、REDO）</p>
+<p>并发控制</p>
+<h2 id="数据库设计基础理论"><a href="#数据库设计基础理论" class="headerlink" title="数据库设计基础理论"></a>数据库设计基础理论</h2><h3 id="系数据库设计"><a href="#系数据库设计" class="headerlink" title="系数据库设计"></a>系数据库设计</h3><p>函数依赖</p>
+<p>规范化（第一范式、第二范式、第三范式、BC范式、第四范式、第五范式）</p>
+<p>模式分解及分解应遵循地原则</p>
+<h3 id="对象关系数据库设计"><a href="#对象关系数据库设计" class="headerlink" title="对象关系数据库设计"></a>对象关系数据库设计</h3><p>嵌套关系、 复杂类型,继承与引用类型</p>
+<p>与复杂类型有关地查询</p>
+<p>SQL中地函数与过程</p>
+<p>对象关系</p>
+<h2 id="数据挖掘和数据仓库基础知识"><a href="#数据挖掘和数据仓库基础知识" class="headerlink" title="数据挖掘和数据仓库基础知识"></a>数据挖掘和数据仓库基础知识</h2><p>数据挖掘应用和分类</p>
+<p>关联规则、聚类</p>
+<p>数据仓库地成分</p>
+<p>数据仓库地模式</p>
+<h2 id="多媒体基本知识"><a href="#多媒体基本知识" class="headerlink" title="多媒体基本知识"></a>多媒体基本知识</h2><h3 id="多媒体技术基本概念"><a href="#多媒体技术基本概念" class="headerlink" title="多媒体技术基本概念"></a>多媒体技术基本概念</h3><p>多媒体系统基础知识</p>
+<p>常用多媒体文件格式</p>
+<h3 id="多媒体压缩编码技术"><a href="#多媒体压缩编码技术" class="headerlink" title="多媒体压缩编码技术"></a>多媒体压缩编码技术</h3><p>多媒体压缩编码技术</p>
+<p>统计编码</p>
+<p>预测编码</p>
+<p>编码地国际标准</p>
+<h3 id="多媒体技术应用"><a href="#多媒体技术应用" class="headerlink" title="多媒体技术应用"></a>多媒体技术应用</h3><p>简单图形地绘制,图像文件地处理方法</p>
+<p>音频和视频信息地应用</p>
+<p>多媒体应用开发过程</p>
+<h2 id="系统性能知识"><a href="#系统性能知识" class="headerlink" title="系统性能知识"></a>系统性能知识</h2><p>性能计算（应时间、吞吐量、周转时间）</p>
+<p>性能指标和性能设计</p>
+<p>性能测试和性能评估</p>
+<h2 id="计算机应用基础知识"><a href="#计算机应用基础知识" class="headerlink" title="计算机应用基础知识"></a>计算机应用基础知识</h2><p>信息管理、数据处理、辅助设计、科学计算,人工智能等基础知识</p>
+<p>远程通信服务及相关通信协议基础知识</p>
+<h1 id="系统开发和运行维护知识"><a href="#系统开发和运行维护知识" class="headerlink" title="系统开发和运行维护知识"></a>系统开发和运行维护知识</h1><h2 id="软件工程、软件过程改进和软件开发工程管理知识"><a href="#软件工程、软件过程改进和软件开发工程管理知识" class="headerlink" title="软件工程、软件过程改进和软件开发工程管理知识"></a>软件工程、软件过程改进和软件开发工程管理知识</h2><p>软件工程知识</p>
+<p>软件开发生命周期阶段目标和任务</p>
+<p>软件开发工程基础知识（时间管理、成本管理、质量管理、人力资源管理、风险管理等）及其常用管理工具</p>
+<p>主要地软件开发方法（生命周期法、原型法、面向对象法、CASE）</p>
+<p>软件开发工具与环境知识</p>
+<p>软件质量管理基础知识</p>
+<p>软件过程改进基础知识</p>
+<p>软件开发过程评估、软件能力成熟度评估地基础知识</p>
+<h2 id="系统分析基础知识"><a href="#系统分析基础知识" class="headerlink" title="系统分析基础知识"></a>系统分析基础知识</h2><p>系统分析的目地和任务</p>
+<p>结构化分析方法（数据流图（DFD）和数据字典（DD），实体关系图（ERD），描述加工处理地结构化语言）</p>
+<p>统一建模语言（UML）系统规格说明书</p>
+<h2 id="系统设计知识"><a href="#系统设计知识" class="headerlink" title="系统设计知识"></a>系统设计知识</h2><p>系统设计的目地和任务</p>
+<p>结构化设计方法和工具（系统流程图、HIPO图、控制流程图）</p>
+<p>系统总体结构设计（总体布局，设计原则，模块结构设计，数据存取设计，系统配置方案）</p>
+<p>系统详细设计（代码设计、数据库设计、用户界面设计、处理过程设计）</p>
+<p>系统设计说明书</p>
+<h2 id="系统实施知识"><a href="#系统实施知识" class="headerlink" title="系统实施知识"></a>系统实施知识</h2><p>系统实施地主要任务</p>
+<p>结构化程序设计、面向对象程序设计、可视化程序设计</p>
+<p>程序设计语言地选择、程序设计风格</p>
+<p>系统测试地目地、类型,系统测试方法（黑盒测试、白盒测试、灰盒测试）</p>
+<p>测试设计和管理（误曲线、错误排除、收敛、注入故障、测试试用例设计、系统测试报告）</p>
+<p>系统转换基础知识</p>
+<h2 id="系统运行和维护知识"><a href="#系统运行和维护知识" class="headerlink" title="系统运行和维护知识"></a>系统运行和维护知识</h2><p>系统运行管理知识</p>
+<p>系统维护知识</p>
+<p>系统评价知识</p>
+<h1 id="安全性知识"><a href="#安全性知识" class="headerlink" title="安全性知识"></a>安全性知识</h1><p>安全性基本概念（网络安全、操作系统安全、数据库安全）</p>
+<p>计算机病毒地防治，计算机犯罪地防范，容灾</p>
+<p>访问控制、防闯入、安全管理措施</p>
+<p>加密与解密机制</p>
+<p>风险分析、风险类型、抗风险措施和内部控制</p>
+<h1 id="标准化知识"><a href="#标准化知识" class="headerlink" title="标准化知识"></a>标准化知识</h1><p>标准化意识,标准化地发展,标准出台过程</p>
+<p>国际标准、国家标准、行业标准、企业标准基本知识</p>
+<p>代码标准、文件格式标准、安全标准软件开发规范和文档标准</p>
+<p>标准化机构</p>
+<h1 id="信息化基础知识"><a href="#信息化基础知识" class="headerlink" title="信息化基础知识"></a>信息化基础知识</h1><p>信息化意识</p>
+<p>全球信息化趋势、国家信息化战略、企业信息化战略和策略</p>
+<p>有关地法律、法规</p>
+<p>远程教育、电子商务、电子政务等基础知识</p>
+<p>企业信息资源管理基础知识</p>
+<h1 id="计算机专业英语"><a href="#计算机专业英语" class="headerlink" title="计算机专业英语"></a>计算机专业英语</h1><p>掌握计算机技术地基本词汇</p>
+<p>能正确阅读和理解计算机领域地英文资料</p>
+<h1 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h1><h2 id="理解系统需求说明"><a href="#理解系统需求说明" class="headerlink" title="理解系统需求说明"></a>理解系统需求说明</h2><p>了解用户需求、确定系统范围</p>
+<p>确定应用系统数据库地各种关系</p>
+<p>现有环境与新系统环境地关系</p>
+<p>新系统中地数据项、数据字典、数据流</p>
+<h2 id="系统开发地准备"><a href="#系统开发地准备" class="headerlink" title="系统开发地准备"></a>系统开发地准备</h2><p>选择开发方法，准备开发环境，制订开发计划</p>
+<h2 id="设计系统功能"><a href="#设计系统功能" class="headerlink" title="设计系统功能"></a>设计系统功能</h2><p>选择系统机构，设计各子系统地功能和接口，设计安全性策略、需求和实现方法，制定详细地工作流和数据流</p>
+<h2 id="数据库设计-1"><a href="#数据库设计-1" class="headerlink" title="数据库设计"></a>数据库设计</h2><h3 id="设计数据模型"><a href="#设计数据模型" class="headerlink" title="设计数据模型"></a>设计数据模型</h3><p>概念结构设计（设计ER模型）</p>
+<p>逻辑结构设计（转换成DBMS所能接收地数据模型）</p>
+<p>评审设计</p>
+<h3 id="物理结构设计"><a href="#物理结构设计" class="headerlink" title="物理结构设计"></a>物理结构设计</h3><p>设计方法与内容</p>
+<p>存取方法地选择</p>
+<p>评审设计与性能预测</p>
+<h3 id="数据库实施与维护"><a href="#数据库实施与维护" class="headerlink" title="数据库实施与维护"></a>数据库实施与维护</h3><p>数据加载与应用程序调试</p>
+<p>数据库试运行</p>
+<p>数据库运行与维护</p>
+<h3 id="数据库的保护"><a href="#数据库的保护" class="headerlink" title="数据库的保护"></a>数据库的保护</h3><p>数据库的备份与恢复</p>
+<p>数据库的安全性</p>
+<p>数据库的完整性</p>
+<p>数据库的并发控制</p>
+<h2 id="编写外部设计文档"><a href="#编写外部设计文档" class="headerlink" title="编写外部设计文档"></a>编写外部设计文档</h2><p>编写系统说明书（系统配置图、各子系统关系图、系统流程图，系统功能说明、输入输出规格说明、数据规格说明、用户手册框架）</p>
+<p>设计系统测试要求</p>
+<h2 id="设计评审"><a href="#设计评审" class="headerlink" title="设计评审"></a>设计评审</h2><h1 id="数据库应用系统设计"><a href="#数据库应用系统设计" class="headerlink" title="数据库应用系统设计"></a>数据库应用系统设计</h1><h2 id="设计数据库应用系统结构"><a href="#设计数据库应用系统结构" class="headerlink" title="设计数据库应用系统结构"></a>设计数据库应用系统结构</h2><p>信息系统的架构（如Client/Server）与DBMS</p>
+<p>多用户数据库环境（文件服务器体系结构、Client/Server体系结构）</p>
+<p>大规模数据库和并行计算机体系结构（SMP、MPP）</p>
+<p>中间件角色和相关工具</p>
+<p>按构件分解，确定构件功能规格以及构件之间的接口</p>
+<h2 id="设计输入输出"><a href="#设计输入输出" class="headerlink" title="设计输入输出"></a>设计输入输出</h2><p>屏幕界面设计,设计输入输出检查方法和检查信息</p>
+<p>数据库交互与连接（掌握C程序设计语言，以及Java、Visual Basic、Visual C＋＋、PowerBuilder、Delphi中任一种开发工具与数据库互连地方法（如何与数据库服务器沟通））</p>
+<h2 id="设计物理数据"><a href="#设计物理数据" class="headerlink" title="设计物理数据"></a>设计物理数据</h2><p>分析事务在数据库上运行的频率和性能要求，确定逻辑数据组织方式、存储介质，设计索引结构和处理方式<br>将逻辑数据结构变换成物理数据结构，计算容量（空间代价），确定存取方法（时间效率）、系统配置（维护代价）并进行优化</p>
+<h2 id="设计安全体系"><a href="#设计安全体系" class="headerlink" title="设计安全体系"></a>设计安全体系</h2><p>明确安全等级</p>
+<p>数据库的登录方式</p>
+<p>数据库访问</p>
+<p>许可（对象许可、命令许可、授权许可的方法）</p>
+<h2 id="应用程序开发"><a href="#应用程序开发" class="headerlink" title="应用程序开发"></a>应用程序开发</h2><h3 id="应用程序开发-1"><a href="#应用程序开发-1" class="headerlink" title="应用程序开发"></a>应用程序开发</h3><p>选择应用程序开发平台</p>
+<p>系统实施顺序</p>
+<p>框架开发</p>
+<p>基础小组的程序开发</p>
+<p>源代码控制</p>
+<p>版本控制</p>
+<h3 id="模块划分（原则、方法、标准）"><a href="#模块划分（原则、方法、标准）" class="headerlink" title="模块划分（原则、方法、标准）"></a>模块划分（原则、方法、标准）</h3><h3 id="编写程序设计文档"><a href="#编写程序设计文档" class="headerlink" title="编写程序设计文档"></a>编写程序设计文档</h3><p>模块规格说明书（功能和接口说明、程序处理逻辑地描述、输入输出数据格式地描述）</p>
+<p>测试要求说明书（测试类型和目标，测试用例，测试方法）</p>
+<h3 id="程序设计评审"><a href="#程序设计评审" class="headerlink" title="程序设计评审"></a>程序设计评审</h3><h2 id="编写应用系统设计文档"><a href="#编写应用系统设计文档" class="headerlink" title="编写应用系统设计文档"></a>编写应用系统设计文档</h2><p>系统配置说明、构件划分图、构件间地接口、构件处理说明、屏幕设计文档、报表设计文档、程序设计文档、文件设计文档、数据库设计文档</p>
+<h2 id="设计评审-1"><a href="#设计评审-1" class="headerlink" title="设计评审"></a>设计评审</h2><h1 id="数据库应用系统实施"><a href="#数据库应用系统实施" class="headerlink" title="数据库应用系统实施"></a>数据库应用系统实施</h1><h2 id="整个系统地配置与管理"><a href="#整个系统地配置与管理" class="headerlink" title="整个系统地配置与管理"></a>整个系统地配置与管理</h2><h2 id="常用数据库管理系统的应用（SQL-Server、Oracle、Sybase、DB2、Access或Visual-Foxpro）"><a href="#常用数据库管理系统的应用（SQL-Server、Oracle、Sybase、DB2、Access或Visual-Foxpro）" class="headerlink" title="常用数据库管理系统的应用（SQL Server、Oracle、Sybase、DB2、Access或Visual Foxpro）"></a>常用数据库管理系统的应用（SQL Server、Oracle、Sybase、DB2、Access或Visual Foxpro）</h2><p>创建数据库</p>
+<p>创建表、创建索引、创建视图、创建约束、创建UDDT&lt;用户自定义类型）</p>
+<p>创建和管理触发器</p>
+<p>建立安全体系</p>
+<h2 id="数据库应用系统安装"><a href="#数据库应用系统安装" class="headerlink" title="数据库应用系统安装"></a>数据库应用系统安装</h2><p>拟定系统安装计划（考虑费用、客户关系、雇员关系、后勤关系和风险等因素）</p>
+<p>拟定人力资源使用计划（组织机构安排地合理性）</p>
+<p>直接安装（安装新系统并使系统快速进入运行状态）</p>
+<p>并行安装（新旧系统并行运行一段时间）</p>
+<p>阶段安装（经过一系列地步骤和阶段使新系统各部分逐步投入运行）</p>
+<h2 id="数据库应用系统测试"><a href="#数据库应用系统测试" class="headerlink" title="数据库应用系统测试"></a>数据库应用系统测试</h2><p>拟定测试目标、计划、方法与步骤</p>
+<p>数据加载，准备测试数据</p>
+<p>指导应用程序员进行模块测试进行验收</p>
+<p>准备系统集成测试环境测试工具</p>
+<p>写出数据库运行测试报告</p>
+<h2 id="培训与用户支持"><a href="#培训与用户支持" class="headerlink" title="培训与用户支持"></a>培训与用户支持</h2><h1 id="数据库系统地运行和管理"><a href="#数据库系统地运行和管理" class="headerlink" title="数据库系统地运行和管理"></a>数据库系统地运行和管理</h1><h2 id="数据库系统地运行计划"><a href="#数据库系统地运行计划" class="headerlink" title="数据库系统地运行计划"></a>数据库系统地运行计划</h2><p>运行策略的确定</p>
+<p>确定数据库系统报警对象和报警方式</p>
+<p>数据库系统地管理计划（执行，故障/恢复，安全性，完整性，用户培训和维护）</p>
+<h2 id="数据库系统地运行和维护"><a href="#数据库系统地运行和维护" class="headerlink" title="数据库系统地运行和维护"></a>数据库系统地运行和维护</h2><p>新旧系统的转换</p>
+<p>收集和分析报警数据（执行报警、故障报警、安全报警）</p>
+<p>连续稳定地运行</p>
+<p>数据库维护（数据库重构、安全视图地评价和验证、文档维护）</p>
+<p>数据库系统地运行统计（收集、分析、提出改进措施）</p>
+<p>关于运行标准和标准改进一致性的建议</p>
+<p>数据库系统的审计</p>
+<h2 id="数据库管理"><a href="#数据库管理" class="headerlink" title="数据库管理"></a>数据库管理</h2><p>数据字典和数据仓库的管理</p>
+<p>数据完整性维护和管理（实体完整性、参照完整性）</p>
+<p>数据库物理结构的管理（保证数据不推迟访问）</p>
+<p>数据库空间及碎片管理</p>
+<p>备份和恢复（顺序、日志（审计痕迹）、检查点）</p>
+<p>死锁管理（集中式、分布式）</p>
+<p>并发控制（可串行性、锁机制、时间戳、优化）</p>
+<p>数据安全性管理（加密、安全、访问控制、视图、有效性确认规则）</p>
+<p>数据库管理员（DBA）职责</p>
+<h2 id="性能调整"><a href="#性能调整" class="headerlink" title="性能调整"></a>性能调整</h2><p>SQL语句的编码检验</p>
+<p>表设计的评价　</p>
+<p>索引的改进</p>
+<p>物理分配的改进</p>
+<p>设备增强</p>
+<p>数据库性能优化</p>
+<h2 id="用户支持"><a href="#用户支持" class="headerlink" title="用户支持"></a>用户支持</h2><p>用户培训</p>
+<p>售后服务</p>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="数据库语言"><a href="#数据库语言" class="headerlink" title="数据库语言"></a>数据库语言</h2><p>数据库语言的要素</p>
+<p>数据库语言的使用方式（交互式和嵌入式）</p>
+<h2 id="SQL概述"><a href="#SQL概述" class="headerlink" title="SQL概述"></a>SQL概述</h2><p>SQL语句的特征</p>
+<p>SQL语句的基本成分</p>
+<h2 id="数据库定义"><a href="#数据库定义" class="headerlink" title="数据库定义"></a>数据库定义</h2><p>创建数据库（Create Datebase）、创建表（Create Table）</p>
+<p>定义数据完整性</p>
+<p>修改表（Alter Table）、删除表（Drop Table）</p>
+<p>定义索引（Create Index）、删除索引（Drop Index）</p>
+<p>定义视图（Create View）、删除视图（Drop View）、更新视图</p>
+<h2 id="数据操作-1"><a href="#数据操作-1" class="headerlink" title="数据操作"></a>数据操作</h2><p>Select语句的基本机构</p>
+<p>简单查询</p>
+<p>SQL中的选择、投影</p>
+<p>字符串比较，涉及空值地比较</p>
+<p>日期时间，布尔值，输出排序</p>
+<p>多表查询</p>
+<p>避免属性歧义</p>
+<p>SQL中的连接、并、交、差</p>
+<p>SQL中的元组变量</p>
+<p>子查询</p>
+<h2 id="完整性控制与安全机制"><a href="#完整性控制与安全机制" class="headerlink" title="完整性控制与安全机制"></a>完整性控制与安全机制</h2><p>主键（Primary Key）约束</p>
+<p>外键（Foreign Key）约束</p>
+<p>属性值上的约束（Null、Check、Create Domain）</p>
+<p>全局约束（Create Assertions）</p>
+<p>权限、授权（Grant）、销权（Revoke）</p>
+<h2 id="创建触发器（Create-Trigger）"><a href="#创建触发器（Create-Trigger）" class="headerlink" title="创建触发器（Create Trigger）"></a>创建触发器（Create Trigger）</h2><h2 id="SQL使用方式"><a href="#SQL使用方式" class="headerlink" title="SQL使用方式"></a>SQL使用方式</h2><p>交互式SQL</p>
+<p>嵌入式SQL</p>
+<p>SQL与宿主语言接口&lt;Declare、共享变量、游标、卷游标）</p>
+<p>动态SQL</p>
+<p>API</p>
+<h2 id="SQL-标准化"><a href="#SQL-标准化" class="headerlink" title="SQL 标准化"></a>SQL 标准化</h2><h1 id="网络环境下的数据库"><a href="#网络环境下的数据库" class="headerlink" title="网络环境下的数据库"></a>网络环境下的数据库</h1><h2 id="分布式数据库"><a href="#分布式数据库" class="headerlink" title="分布式数据库"></a>分布式数据库</h2><h3 id="分布式数据库的概念"><a href="#分布式数据库的概念" class="headerlink" title="分布式数据库的概念"></a>分布式数据库的概念</h3><p>分布式数据库的特点与目标</p>
+<h3 id="分布式数据库地体系结构"><a href="#分布式数据库地体系结构" class="headerlink" title="分布式数据库地体系结构"></a>分布式数据库地体系结构</h3><p>分布式数据库的模式结构</p>
+<p>数据分布的策略（数据分片、分布透明性）</p>
+<p>分布式数据库管理系统</p>
+<h3 id="分布式查询处理和优化"><a href="#分布式查询处理和优化" class="headerlink" title="分布式查询处理和优化"></a>分布式查询处理和优化</h3><h3 id="分布式事务管理"><a href="#分布式事务管理" class="headerlink" title="分布式事务管理"></a>分布式事务管理</h3><p>分布式数据库的恢复（故障、恢复、2段提交、3段提交）</p>
+<p>分布式数据库的透明性（局部、分裂、复制、处理、并发、执行）</p>
+<h3 id="分布式数据库系统的应用"><a href="#分布式数据库系统的应用" class="headerlink" title="分布式数据库系统的应用"></a>分布式数据库系统的应用</h3><h2 id="网络环境下数据库系统地设计与实施"><a href="#网络环境下数据库系统地设计与实施" class="headerlink" title="网络环境下数据库系统地设计与实施"></a>网络环境下数据库系统地设计与实施</h2><p>数据地分布设计</p>
+<p>负载均衡设计</p>
+<p>数据库互连技术</p>
+<h2 id="面向Web地DBMS技术"><a href="#面向Web地DBMS技术" class="headerlink" title="面向Web地DBMS技术"></a>面向Web地DBMS技术</h2><p>三层体系结构</p>
+<p>动态Web网页</p>
+<p>ASP、JSP、XML的应用</p>
+<h1 id="数据库地安全性"><a href="#数据库地安全性" class="headerlink" title="数据库地安全性"></a>数据库地安全性</h1><h2 id="安全性策略地理解"><a href="#安全性策略地理解" class="headerlink" title="安全性策略地理解"></a>安全性策略地理解</h2><p>数据库视图的安全性策略</p>
+<p>数据地安全级别（最重要的、重要的、注意、选择）</p>
+<h2 id="数据库安全测量"><a href="#数据库安全测量" class="headerlink" title="数据库安全测量"></a>数据库安全测量</h2><p>用户访问控制（采用口令等）</p>
+<p>程序访问控制（包含在程序中的SQL命令限制）</p>
+<p>表的访问控制（视图机制）</p>
+<p>控制访问的函数和操作</p>
+<p>外部存储数据的加密与解密</p>
+<h1 id="数据库发展趋势与新技术"><a href="#数据库发展趋势与新技术" class="headerlink" title="数据库发展趋势与新技术"></a>数据库发展趋势与新技术</h1><h2 id="面向对象数据库（OODBMS）"><a href="#面向对象数据库（OODBMS）" class="headerlink" title="面向对象数据库（OODBMS）"></a>面向对象数据库（OODBMS）</h2><h3 id="OODBMS的特征"><a href="#OODBMS的特征" class="headerlink" title="OODBMS的特征"></a>OODBMS的特征</h3><h3 id="面向对象数据模型"><a href="#面向对象数据模型" class="headerlink" title="面向对象数据模型"></a>面向对象数据模型</h3><p>对象结构、对象类、继承与多重继承、对象标识、对象包含、对象嵌套</p>
+<h3 id="面向对象数据库语言"><a href="#面向对象数据库语言" class="headerlink" title="面向对象数据库语言"></a>面向对象数据库语言</h3><h3 id="对象关系数据库系统（ORDBMS）"><a href="#对象关系数据库系统（ORDBMS）" class="headerlink" title="对象关系数据库系统（ORDBMS）"></a>对象关系数据库系统（ORDBMS）</h3><p>嵌套关系</p>
+<p>复杂类型</p>
+<p>继承、引用类型</p>
+<p>与复杂类型有关的查询</p>
+<p>函数与过程</p>
+<p>面向对象与对象关系</p>
+<p>ORDBMS应用领域</p>
+<h2 id="企业资源计划（ERP）和数据库"><a href="#企业资源计划（ERP）和数据库" class="headerlink" title="企业资源计划（ERP）和数据库"></a>企业资源计划（ERP）和数据库</h2><h3 id="ERP概述"><a href="#ERP概述" class="headerlink" title="ERP概述"></a>ERP概述</h3><p>基本MRP（制造资源计划）、闭环MRP、ERP</p>
+<p>基本原理、发展趋势</p>
+<p>ERP设计地总体思路（一个中心、两类业务、三条干线）</p>
+<h3 id="ERP与数据库"><a href="#ERP与数据库" class="headerlink" title="ERP与数据库"></a>ERP与数据库</h3><p>运行数据库与ERP数据模型之间的关系</p>
+<p>运行数据库与ERP数据库之间的关系</p>
+<h3 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h3><h2 id="决策支持系统地建立"><a href="#决策支持系统地建立" class="headerlink" title="决策支持系统地建立"></a>决策支持系统地建立</h2><p>决策支持系统的概念</p>
+<p>数据仓库设计</p>
+<p>数据转移技术</p>
+<p>联机分析处理（OLAP）技术</p>
+<p>企业决策支持解决方案</p>
+<p>联机事务处理（OLTP）</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%B7%A5/">-数工</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">数工 考点总结</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/04/06/数工（一）计算机系统知识/" title="数工（一）计算机系统知识"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-06</div><div class="title">数工（一）计算机系统知识</div></div></a></div><div><a href="/2021/04/07/数工（二）程序设计语言/" title="数工（二）程序设计语言"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-07</div><div class="title">数工（二）程序设计语言</div></div></a></div><div><a href="/2021/04/08/数工（六）数据库技术基础/" title="数工（六）数据库技术基础"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-08</div><div class="title">数工（六）数据库技术基础</div></div></a></div><div><a href="/2021/04/13/数工 考点总结/" title="数工 考点总结"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-13</div><div class="title">数工 考点总结</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/background.jpg" onerror="this.onerror=null;this.src='/img/touxiang.png'" alt="avatar"/><div class="author-info__name">JOEL-T99</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">41</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JOEL-T99"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JOEL-T99" target="_blank" title="Github"><i class="fa fa-github"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">感谢访问本站，若喜欢请收藏 ^_^</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">计算机系统知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text">硬件知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%92%8C%E4%B8%BB%E8%A6%81%E9%83%A8%E4%BB%B6%E5%9C%B0%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.1.</span> <span class="toc-text">计算机体系结构和主要部件地基本工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">存储系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7%E3%80%81%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E8%AF%84%E6%B5%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.1.3.</span> <span class="toc-text">安全性、可靠性与系统性能评测基础知识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">数据结构与算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.1.</span> <span class="toc-text">常用数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"><span class="toc-number">1.2.2.</span> <span class="toc-text">常用算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9F%A5%E8%AF%86"><span class="toc-number">1.3.</span> <span class="toc-text">软件知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86"><span class="toc-number">1.3.1.</span> <span class="toc-text">操作系统知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%92%8C%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F%E5%9C%B0%E7%9F%A5%E8%AF%86"><span class="toc-number">1.3.2.</span> <span class="toc-text">程序设计语言和语言处理程序地知识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86"><span class="toc-number">1.4.</span> <span class="toc-text">计算机网络知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF"><span class="toc-number">2.</span> <span class="toc-text">数据库技术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80"><span class="toc-number">2.1.</span> <span class="toc-text">数据库技术基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">数据库模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%9C%B0%E5%8A%9F%E8%83%BD%E5%92%8C%E7%89%B9%E5%BE%81"><span class="toc-number">2.1.2.</span> <span class="toc-text">数据库管理系统地功能和特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.3.</span> <span class="toc-text">数据库系统体系结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-number">2.2.</span> <span class="toc-text">数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="toc-number">2.2.1.</span> <span class="toc-text">关系运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A0%87%E5%87%86%E8%AF%AD%E8%A8%80%EF%BC%88SQL%EF%BC%89"><span class="toc-number">2.2.2.</span> <span class="toc-text">关系数据库标准语言（SQL）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9C%B0%E6%8E%A7%E5%88%B6%E5%8A%9F%E8%83%BD"><span class="toc-number">2.3.</span> <span class="toc-text">数据库地控制功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA"><span class="toc-number">2.4.</span> <span class="toc-text">数据库设计基础理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.4.1.</span> <span class="toc-text">系数据库设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.4.2.</span> <span class="toc-text">对象关系数据库设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.5.</span> <span class="toc-text">数据挖掘和数据仓库基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">2.6.</span> <span class="toc-text">多媒体基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.6.1.</span> <span class="toc-text">多媒体技术基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81%E6%8A%80%E6%9C%AF"><span class="toc-number">2.6.2.</span> <span class="toc-text">多媒体压缩编码技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8"><span class="toc-number">2.6.3.</span> <span class="toc-text">多媒体技术应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E7%9F%A5%E8%AF%86"><span class="toc-number">2.7.</span> <span class="toc-text">系统性能知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.8.</span> <span class="toc-text">计算机应用基础知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%92%8C%E8%BF%90%E8%A1%8C%E7%BB%B4%E6%8A%A4%E7%9F%A5%E8%AF%86"><span class="toc-number">3.</span> <span class="toc-text">系统开发和运行维护知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E3%80%81%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%94%B9%E8%BF%9B%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E7%AE%A1%E7%90%86%E7%9F%A5%E8%AF%86"><span class="toc-number">3.1.</span> <span class="toc-text">软件工程、软件过程改进和软件开发工程管理知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">3.2.</span> <span class="toc-text">系统分析基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%9F%A5%E8%AF%86"><span class="toc-number">3.3.</span> <span class="toc-text">系统设计知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%96%BD%E7%9F%A5%E8%AF%86"><span class="toc-number">3.4.</span> <span class="toc-text">系统实施知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E5%92%8C%E7%BB%B4%E6%8A%A4%E7%9F%A5%E8%AF%86"><span class="toc-number">3.5.</span> <span class="toc-text">系统运行和维护知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7%E7%9F%A5%E8%AF%86"><span class="toc-number">4.</span> <span class="toc-text">安全性知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86"><span class="toc-number">5.</span> <span class="toc-text">标准化知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">6.</span> <span class="toc-text">信息化基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%8B%B1%E8%AF%AD"><span class="toc-number">7.</span> <span class="toc-text">计算机专业英语</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="toc-number">8.</span> <span class="toc-text">数据库设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E7%B3%BB%E7%BB%9F%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E"><span class="toc-number">8.1.</span> <span class="toc-text">理解系统需求说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%9C%B0%E5%87%86%E5%A4%87"><span class="toc-number">8.2.</span> <span class="toc-text">系统开发地准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD"><span class="toc-number">8.3.</span> <span class="toc-text">设计系统功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1-1"><span class="toc-number">8.4.</span> <span class="toc-text">数据库设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">8.4.1.</span> <span class="toc-text">设计数据模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">8.4.2.</span> <span class="toc-text">物理结构设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E6%96%BD%E4%B8%8E%E7%BB%B4%E6%8A%A4"><span class="toc-number">8.4.3.</span> <span class="toc-text">数据库实施与维护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BF%9D%E6%8A%A4"><span class="toc-number">8.4.4.</span> <span class="toc-text">数据库的保护</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E5%A4%96%E9%83%A8%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3"><span class="toc-number">8.5.</span> <span class="toc-text">编写外部设计文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%AF%84%E5%AE%A1"><span class="toc-number">8.6.</span> <span class="toc-text">设计评审</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="toc-number">9.</span> <span class="toc-text">数据库应用系统设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="toc-number">9.1.</span> <span class="toc-text">设计数据库应用系统结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">9.2.</span> <span class="toc-text">设计输入输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%89%A9%E7%90%86%E6%95%B0%E6%8D%AE"><span class="toc-number">9.3.</span> <span class="toc-text">设计物理数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB"><span class="toc-number">9.4.</span> <span class="toc-text">设计安全体系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91"><span class="toc-number">9.5.</span> <span class="toc-text">应用程序开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-1"><span class="toc-number">9.5.1.</span> <span class="toc-text">应用程序开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%88%92%E5%88%86%EF%BC%88%E5%8E%9F%E5%88%99%E3%80%81%E6%96%B9%E6%B3%95%E3%80%81%E6%A0%87%E5%87%86%EF%BC%89"><span class="toc-number">9.5.2.</span> <span class="toc-text">模块划分（原则、方法、标准）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3"><span class="toc-number">9.5.3.</span> <span class="toc-text">编写程序设计文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%84%E5%AE%A1"><span class="toc-number">9.5.4.</span> <span class="toc-text">程序设计评审</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3"><span class="toc-number">9.6.</span> <span class="toc-text">编写应用系统设计文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%AF%84%E5%AE%A1-1"><span class="toc-number">9.7.</span> <span class="toc-text">设计评审</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%96%BD"><span class="toc-number">10.</span> <span class="toc-text">数据库应用系统实施</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E4%B8%AA%E7%B3%BB%E7%BB%9F%E5%9C%B0%E9%85%8D%E7%BD%AE%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="toc-number">10.1.</span> <span class="toc-text">整个系统地配置与管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%88SQL-Server%E3%80%81Oracle%E3%80%81Sybase%E3%80%81DB2%E3%80%81Access%E6%88%96Visual-Foxpro%EF%BC%89"><span class="toc-number">10.2.</span> <span class="toc-text">常用数据库管理系统的应用（SQL Server、Oracle、Sybase、DB2、Access或Visual Foxpro）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="toc-number">10.3.</span> <span class="toc-text">数据库应用系统安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95"><span class="toc-number">10.4.</span> <span class="toc-text">数据库应用系统测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%B9%E8%AE%AD%E4%B8%8E%E7%94%A8%E6%88%B7%E6%94%AF%E6%8C%81"><span class="toc-number">10.5.</span> <span class="toc-text">培训与用户支持</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9C%B0%E8%BF%90%E8%A1%8C%E5%92%8C%E7%AE%A1%E7%90%86"><span class="toc-number">11.</span> <span class="toc-text">数据库系统地运行和管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9C%B0%E8%BF%90%E8%A1%8C%E8%AE%A1%E5%88%92"><span class="toc-number">11.1.</span> <span class="toc-text">数据库系统地运行计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9C%B0%E8%BF%90%E8%A1%8C%E5%92%8C%E7%BB%B4%E6%8A%A4"><span class="toc-number">11.2.</span> <span class="toc-text">数据库系统地运行和维护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86"><span class="toc-number">11.3.</span> <span class="toc-text">数据库管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E8%B0%83%E6%95%B4"><span class="toc-number">11.4.</span> <span class="toc-text">性能调整</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%94%AF%E6%8C%81"><span class="toc-number">11.5.</span> <span class="toc-text">用户支持</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL"><span class="toc-number">12.</span> <span class="toc-text">SQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%AD%E8%A8%80"><span class="toc-number">12.1.</span> <span class="toc-text">数据库语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%A6%82%E8%BF%B0"><span class="toc-number">12.2.</span> <span class="toc-text">SQL概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9A%E4%B9%89"><span class="toc-number">12.3.</span> <span class="toc-text">数据库定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-1"><span class="toc-number">12.4.</span> <span class="toc-text">数据操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E6%80%A7%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="toc-number">12.5.</span> <span class="toc-text">完整性控制与安全机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%A7%A6%E5%8F%91%E5%99%A8%EF%BC%88Create-Trigger%EF%BC%89"><span class="toc-number">12.6.</span> <span class="toc-text">创建触发器（Create Trigger）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">12.7.</span> <span class="toc-text">SQL使用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">12.8.</span> <span class="toc-text">SQL 标准化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">13.</span> <span class="toc-text">网络环境下的数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">13.1.</span> <span class="toc-text">分布式数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">13.1.1.</span> <span class="toc-text">分布式数据库的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9C%B0%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">13.1.2.</span> <span class="toc-text">分布式数据库地体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%9F%A5%E8%AF%A2%E5%A4%84%E7%90%86%E5%92%8C%E4%BC%98%E5%8C%96"><span class="toc-number">13.1.3.</span> <span class="toc-text">分布式查询处理和优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-number">13.1.4.</span> <span class="toc-text">分布式事务管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">13.1.5.</span> <span class="toc-text">分布式数据库系统的应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9C%B0%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E6%96%BD"><span class="toc-number">13.2.</span> <span class="toc-text">网络环境下数据库系统地设计与实施</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91Web%E5%9C%B0DBMS%E6%8A%80%E6%9C%AF"><span class="toc-number">13.3.</span> <span class="toc-text">面向Web地DBMS技术</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9C%B0%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">14.</span> <span class="toc-text">数据库地安全性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7%E7%AD%96%E7%95%A5%E5%9C%B0%E7%90%86%E8%A7%A3"><span class="toc-number">14.1.</span> <span class="toc-text">安全性策略地理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%B5%8B%E9%87%8F"><span class="toc-number">14.2.</span> <span class="toc-text">数据库安全测量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E4%B8%8E%E6%96%B0%E6%8A%80%E6%9C%AF"><span class="toc-number">15.</span> <span class="toc-text">数据库发展趋势与新技术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88OODBMS%EF%BC%89"><span class="toc-number">15.1.</span> <span class="toc-text">面向对象数据库（OODBMS）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#OODBMS%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-number">15.1.1.</span> <span class="toc-text">OODBMS的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">15.1.2.</span> <span class="toc-text">面向对象数据模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%AD%E8%A8%80"><span class="toc-number">15.1.3.</span> <span class="toc-text">面向对象数据库语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%EF%BC%88ORDBMS%EF%BC%89"><span class="toc-number">15.1.4.</span> <span class="toc-text">对象关系数据库系统（ORDBMS）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E8%B5%84%E6%BA%90%E8%AE%A1%E5%88%92%EF%BC%88ERP%EF%BC%89%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">15.2.</span> <span class="toc-text">企业资源计划（ERP）和数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ERP%E6%A6%82%E8%BF%B0"><span class="toc-number">15.2.1.</span> <span class="toc-text">ERP概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ERP%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">15.2.2.</span> <span class="toc-text">ERP与数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="toc-number">15.2.3.</span> <span class="toc-text">案例分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%94%AF%E6%8C%81%E7%B3%BB%E7%BB%9F%E5%9C%B0%E5%BB%BA%E7%AB%8B"><span class="toc-number">15.3.</span> <span class="toc-text">决策支持系统地建立</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/%E6%95%B0%E5%B7%A5-%E7%9F%A5%E8%AF%86%E7%82%B9/" title="数工 知识点"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工 知识点"/></a><div class="content"><a class="title" href="/2021/04/13/%E6%95%B0%E5%B7%A5-%E7%9F%A5%E8%AF%86%E7%82%B9/" title="数工 知识点">数工 知识点</a><time datetime="2021-04-13T09:44:39.000Z" title="Created 2021-04-13 17:44:39">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/" title="数工 考点总结"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工 考点总结"/></a><div class="content"><a class="title" href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/" title="数工 考点总结">数工 考点总结</a><time datetime="2021-04-12T18:34:16.000Z" title="Created 2021-04-13 02:34:16">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/08/%E6%95%B0%E5%B7%A5%EF%BC%88%E5%85%AD%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="数工（六）数据库技术基础"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工（六）数据库技术基础"/></a><div class="content"><a class="title" href="/2021/04/08/%E6%95%B0%E5%B7%A5%EF%BC%88%E5%85%AD%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="数工（六）数据库技术基础">数工（六）数据库技术基础</a><time datetime="2021-04-08T09:42:03.000Z" title="Created 2021-04-08 17:42:03">2021-04-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/07/%E6%95%B0%E5%B7%A5%EF%BC%88%E4%BA%8C%EF%BC%89%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" title="数工（二）程序设计语言"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工（二）程序设计语言"/></a><div class="content"><a class="title" href="/2021/04/07/%E6%95%B0%E5%B7%A5%EF%BC%88%E4%BA%8C%EF%BC%89%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/" title="数工（二）程序设计语言">数工（二）程序设计语言</a><time datetime="2021-04-07T03:48:37.000Z" title="Created 2021-04-07 11:48:37">2021-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/06/%E6%95%B0%E5%B7%A5%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86/" title="数工（一）计算机系统知识"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工（一）计算机系统知识"/></a><div class="content"><a class="title" href="/2021/04/06/%E6%95%B0%E5%B7%A5%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86/" title="数工（一）计算机系统知识">数工（一）计算机系统知识</a><time datetime="2021-04-06T06:13:16.000Z" title="Created 2021-04-06 14:13:16">2021-04-06</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/index.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By JOEL-T99</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="http://joel-t99.online/">Blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script></div></body></html>
