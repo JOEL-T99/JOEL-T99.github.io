@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数工 真题考点总结 | JOEL-T99</title><meta name="keywords" content="-数工"><meta name="author" content="JOEL-T99"><meta name="copyright" content="JOEL-T99"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="计算机操作类计算机系统基础常识2015二进制数据在计算机系统中的表示方法是最基本的专业知识。补码本身是带符号位的，补码表示的数字中0是唯一的，不想原码有+0和-0之分，也意味着n位二进制编码可以表示（2^n）个不同的数。 计算机系统基础知识2015计算机系统中的CPU内部对通用寄存器的存取操作是速度最快的，其次是Cache、内存的、硬盘（外设）。它们共同组成分级存储体系来解决存储容量、成本和速度之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数工 真题考点总结">
+<meta property="og:url" content="http://yoursite.com/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9C%9F%E9%A2%98%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="JOEL-T99">
+<meta property="og:description" content="计算机操作类计算机系统基础常识2015二进制数据在计算机系统中的表示方法是最基本的专业知识。补码本身是带符号位的，补码表示的数字中0是唯一的，不想原码有+0和-0之分，也意味着n位二进制编码可以表示（2^n）个不同的数。 计算机系统基础知识2015计算机系统中的CPU内部对通用寄存器的存取操作是速度最快的，其次是Cache、内存的、硬盘（外设）。它们共同组成分级存储体系来解决存储容量、成本和速度之">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg">
+<meta property="article:published_time" content="2021-04-12T18:34:16.000Z">
+<meta property="article:modified_time" content="2021-04-14T07:51:34.126Z">
+<meta property="article:author" content="JOEL-T99">
+<meta property="article:tag" content="-数工">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg"><link rel="shortcut icon" href="/img/fav.ico"><link rel="canonical" href="http://yoursite.com/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9C%9F%E9%A2%98%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#00c4b6","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-14 15:51:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="JOEL-T99" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/background.jpg" onerror="onerror=null;src='/img/touxiang.png'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">43</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JOEL-T99</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">数工 真题考点总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-04-12T18:34:16.000Z" title="Created 2021-04-13 02:34:16">2021-04-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-04-14T07:51:34.126Z" title="Updated 2021-04-14 15:51:34">2021-04-14</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">Comments:</span><a href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9C%9F%E9%A2%98%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9C%9F%E9%A2%98%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="计算机操作类"><a href="#计算机操作类" class="headerlink" title="计算机操作类"></a>计算机操作类</h1><h2 id="计算机系统基础常识"><a href="#计算机系统基础常识" class="headerlink" title="计算机系统基础常识"></a>计算机系统基础常识</h2><h3 id="2015"><a href="#2015" class="headerlink" title="2015"></a>2015</h3><p>二进制数据在计算机系统中的表示方法是最基本的专业知识。补码本身是带符号位的，补码表示的数字中0是唯一的，不想原码有+0和-0之分，也意味着n位二进制编码可以表示（2^n）个不同的数。</p>
+<h2 id="计算机系统基础知识"><a href="#计算机系统基础知识" class="headerlink" title="计算机系统基础知识"></a>计算机系统基础知识</h2><h3 id="2015-1"><a href="#2015-1" class="headerlink" title="2015"></a>2015</h3><p>计算机系统中的CPU内部对通用寄存器的存取操作是速度最快的，其次是Cache、内存的、硬盘（外设）。它们共同组成分级存储体系来解决存储容量、成本和速度之间的矛盾。</p>
+<p>Cache工作时，需要拷贝主存信息到Cache中，就需要建立主存地址和Cache地址的映像关系。Cache的地址映像方法主要有三种，即全相联映像、直接映像和组相联映像。</p>
+<ul>
+<li><p><strong>全相联映像</strong></p>
+<p>全相联映像方式意味着主存的任意一块可以映像到Cache中的任意一块。</p>
+<p><strong>特点：</strong>块冲突概率低，Cache空间利用率高。</p>
+<p><strong>缺点：</strong>相联目录表容量大导致成本高、查表速度慢。</p>
+</li>
+<li><p><strong>直接映像</strong></p>
+<p>直接映像方式是指主存中的每一块只能映像到Cache汇总的一个特定的块中，整个Cache地址与主存地址的低位部分完全相同。</p>
+<p><strong>特点：</strong>硬件简单，不需要相联寄存器，访问速度快（无需地址变换）。</p>
+<p><strong>缺点：</strong>Cache快冲突概率高导致Cache空间利用率很低。</p>
+</li>
+<li><p><strong>组相联映像</strong></p>
+<p>组相联方式是对上述两种方式的折中处理，对Cache分组，实现组间直接映像，组内全相联，从而获取较低的冲突概率、较高的块利用率，同时的到较快的速度和较低的成本。</p>
+</li>
+</ul>
+<p><strong>总线宽度：</strong>指总线的位数，即数据信号的并行传输能力，也体现总线占用物理空间和成本；总线的宽度是指最大传输率，即每秒传输的数据总量。总线的宽度与时钟频率共同决定了总线的带宽。例如：</p>
+<p>32bit/8=4Byte，200MHz/5*4Byte=160MB/s</p>
+<h3 id="2014"><a href="#2014" class="headerlink" title="2014"></a>2014</h3><p>CPU中有一些重要的寄存器：</p>
+<ul>
+<li><p>程序计数器（PC）</p>
+<p>用于存放指令的地址。当程序顺序执行时，没去出一条指令，PC内容自动增加一个值，指向下一条要取的指令。当程序出现转移时，则将转移地址送入PC，然后由PC指出新的指令地址。</p>
+</li>
+<li><p>状态寄存器</p>
+<p>用于记录运算中产生的标志信息。状态寄存器中的每一位单独使用，称为标识位。标志位的取值反映了ALU当前的各种状态，可以作为条件转移指令的转移条件。典型的标志位有以下几位：进位标志位（C）、零标志位（Z）、符号标志位（S）、溢出标志位（V）、奇偶标志位（P）。</p>
+</li>
+<li><p>通用寄存器组</p>
+<p>是CPU中的一组工作寄存器，运算时用于暂存操作数或地址。在程序中使用通用寄存器可以减少访问内存的次数，提高运算速度。</p>
+</li>
+<li><p>累加器</p>
+<p>是一个数据寄存器，在运算过程中暂时存放操作数和中间运算结果，不能用于长时间地保存一个数据。</p>
+</li>
+</ul>
+<h2 id="计算机组成原理的基础知识"><a href="#计算机组成原理的基础知识" class="headerlink" title="计算机组成原理的基础知识"></a>计算机组成原理的基础知识</h2><h3 id="2015-2"><a href="#2015-2" class="headerlink" title="2015"></a>2015</h3><p><strong>中断相应时间：</strong>是指从发出中断请求到开始进入中断服务程序所需的时间。</p>
+<h2 id="计算机系统结构基础知识"><a href="#计算机系统结构基础知识" class="headerlink" title="计算机系统结构基础知识"></a>计算机系统结构基础知识</h2><h3 id="2015-3"><a href="#2015-3" class="headerlink" title="2015"></a>2015</h3><p>对指令流水性能的度量有吞吐率、加速比和效率等指标。因此要使加速比效率最大化应该对流水线各级采用相同的运行时间。另外，流水线采用异步控制法并不会给流水线性能带来改善，反而会增加控制电路的复杂性。</p>
+<ul>
+<li><p><strong>吞吐率</strong></p>
+<p>是指单位时间流水线所完成的任务数或输出结果的数量，最大吞吐率则是在达到稳定状态后所得到的吞吐率，它取决于流水线中最慢一段所需的时间，所以该段称为流水线的瓶颈。</p>
+</li>
+<li><p>加速比</p>
+<p>是指等功能的非流水线执行时间与流水线执行时间之比，加速比与吞吐率成正比，如果流水线断流，实际吞吐率将会明显下降，则加速比也会明显下降。</p>
+</li>
+<li><p><strong>效率</strong></p>
+<p>是指流水线的设备利用率，从时空图上看效率就是n个任务所占的时空区与m个段总的时空区之比。</p>
+</li>
+</ul>
+<h1 id="网络安全类"><a href="#网络安全类" class="headerlink" title="网络安全类"></a>网络安全类</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="2015-4"><a href="#2015-4" class="headerlink" title="2015"></a>2015</h3><p>终端设备与远程站点之间建立安全连接的协议是SSH。SSH意为Secure Shell的缩写是由IETF制定的建立在应用层和传输层基础上的安全协议。SSH是专门远程登录会话和其他网络服务提供安全性的协议。</p>
+<p><strong>安全需求分为：</strong>物理线路安全、网络安全、系统安全和应用安全。机房安全属于物理安全、入侵检测属于网络安全、漏洞补丁管理属于系统安全、数据库安全是应用安全。</p>
+<p>把局域网划分为多个不同的VLAN，使得网络接入不再局限于物理地址的约束，这样做就简化了在网络中增加、移除和移动主机的配置，特别是动态配置VLAN，物理主机在哪里，它都属于自己的VLAN中。VLAN内部可以相互通信，VLAN之间不能直接通信，必须经过特殊配制的路由器才可以连通。这样做的结果是，通过在较大的局域网中创建不同的VLAN，可以抵御广播风暴的影响，也可以通过设置防火墙来提高网络的安全性。VLAN并不能直接增强网络的安全性。</p>
+<h2 id="URL的基础知识"><a href="#URL的基础知识" class="headerlink" title="URL的基础知识"></a>URL的基础知识</h2><h3 id="2015-5"><a href="#2015-5" class="headerlink" title="2015"></a>2015</h3><p><strong>URL由三部分组成：</strong>资源类型、存放资源的主机域名、资源文件名。一般情况下，一个URL可以采用“主机名.域名”的形式打开指定的页面，也可以单独使用“域名”来打开指定的页面，但是这样实现的前提是需要进行相应的设置和对应。</p>
+<h2 id="DHCP和FTP的两个应用协议"><a href="#DHCP和FTP的两个应用协议" class="headerlink" title="DHCP和FTP的两个应用协议"></a>DHCP和FTP的两个应用协议</h2><h3 id="2015-6"><a href="#2015-6" class="headerlink" title="2015"></a>2015</h3><p><strong>DHCP协议的功能：</strong>自动分配IP地址。</p>
+<p><strong>FTP协议的作用：</strong>文件传输，使用的传输协议为TCP。</p>
+<h1 id="知识产权类"><a href="#知识产权类" class="headerlink" title="知识产权类"></a>知识产权类</h1><h3 id="2015-7"><a href="#2015-7" class="headerlink" title="2015"></a>2015</h3><p>当两个以上的申请人分别就同样的发明创造申请专利的，专利授予最先申请的人。</p>
+<h1 id="软件工程类"><a href="#软件工程类" class="headerlink" title="软件工程类"></a>软件工程类</h1><h2 id="软件工程的基本概念"><a href="#软件工程的基本概念" class="headerlink" title="软件工程的基本概念"></a>软件工程的基本概念</h2><h3 id="2015-8"><a href="#2015-8" class="headerlink" title="2015"></a>2015</h3><p><strong>软件工程的基本要素包括：</strong>方法、工具和过程。方法是产生某些结果的形式化过程；工具是用更好的方式完成某件事情的设备或自动化过程；过程是把工具和方法结合起来，定义涉及活动、约束和资源使用的一系列步骤，来达到某种想要的输出。</p>
+<p>从工程管理角度，可以将软件设计分为两个阶段：<strong>概要设计阶段和详细设计阶段</strong>。结构化设计方法汇中，概要设计阶段进行软件体系结构的设计、数据设计和接口设计；详细设计阶段进行数据结构和算法的设计。面向对象设计中，概要设计阶段进行体系结构设计、初步的类设计/数据设计、结构设计；详细设计阶段进行构件设计。</p>
+<p>结构化设计和面向对象设计是两种不同的设计方法，结构化设计根据系统的数据流图进行设计，模块体现为函数、过程及子程序；面向对象设计基于面向对象的基本概念进行，模块体现为类、对象和构件等。</p>
+<h2 id="软件项目管理的基础知识"><a href="#软件项目管理的基础知识" class="headerlink" title="软件项目管理的基础知识"></a>软件项目管理的基础知识</h2><h3 id="2015-9"><a href="#2015-9" class="headerlink" title="2015"></a>2015</h3><p><strong>活动图</strong>是描述一个项目中各个工作任务相互依赖关系的一种模型，项目的很多重要特性可以通过分析活动图得到，如估算项目完成时间、计算关键路径和关键活动等。</p>
+<p>在进行风险管理时，根据风险的优先级来确定风险控制策略，而优先级是根据风险暴露来确定的。风险暴露是一种量化风险影响的指标，等于风险影响乘以风险概率。风险影响是当风险发生时造成的损失。风险概率是风险管理的一个重要活动。</p>
+<h1 id="程序语言类"><a href="#程序语言类" class="headerlink" title="程序语言类"></a>程序语言类</h1><h2 id="程序语言基础知识"><a href="#程序语言基础知识" class="headerlink" title="程序语言基础知识"></a>程序语言基础知识</h2><h3 id="2015-10"><a href="#2015-10" class="headerlink" title="2015"></a>2015</h3><p>程序设计语言的基本成分包括<strong>数据、运算、控制和传输</strong>等。</p>
+<p>高级语言不依赖于具体的机器硬件。</p>
+<p>局部变量只能在函数内部使用，其作用域是从定义位置到函数体或复合语句体结束为止。局部变量的值通常在其生存期内是变化的。</p>
+<p>程序中的常量的值在运行时是不可改变的。</p>
+<p>程序运行时的用户内存空间一般划分为代码区、静态数据区、栈区和堆区，其中栈区和堆区也称为动态数据区。全局变量的存储空间在静态数据区。</p>
+<h2 id="软件过程模型的基础知识"><a href="#软件过程模型的基础知识" class="headerlink" title="软件过程模型的基础知识"></a>软件过程模型的基础知识</h2><h3 id="2015-11"><a href="#2015-11" class="headerlink" title="2015"></a>2015</h3><p>瀑布模型：将软件生存周期各个活动规定为线形顺序连接的若干阶段的模型。这是一种理想的现象开发模型，缺乏灵活性，无法解决软件需求不明确或不准确的问题。</p>
+<p>原型模型：从初始的原型逐渐演化成为最红软件产品，特别适用于对软件需求缺乏准确的认识的情况。</p>
+<p>增量开发：是把软件产品作为一系列的增量构件来设计、编码、集成和测试，可以在增量开发过程中逐步理解需求。</p>
+<p>螺旋将瀑布模型与快速原型结合起来，并且加入了两种模型均忽略了的风险分析，适用于复杂的大型软件。</p>
+<h1 id="系统开发和运行类"><a href="#系统开发和运行类" class="headerlink" title="系统开发和运行类"></a>系统开发和运行类</h1><h2 id="数据流图的概念和应用"><a href="#数据流图的概念和应用" class="headerlink" title="数据流图的概念和应用"></a>数据流图的概念和应用</h2><h3 id="2015-12"><a href="#2015-12" class="headerlink" title="2015"></a>2015</h3><p>数据流图或称数据流程图（Data Flow Diagram，DFD）是一种便于客户理解、分析系统数据流程的图形工具。数据流图描述堆数据的处理流程，着重系统信息的流向和处理过程。它摆脱了系统的物理内容，精确的在逻辑上描述系统的功能、输入、输出和数据存储等，是系统逻辑模型的重要组成部分。</p>
+<h1 id="关系数据库类"><a href="#关系数据库类" class="headerlink" title="关系数据库类"></a>关系数据库类</h1><h2 id="关系数据库基础知识"><a href="#关系数据库基础知识" class="headerlink" title="关系数据库基础知识"></a>关系数据库基础知识</h2><h3 id="2015-13"><a href="#2015-13" class="headerlink" title="2015"></a>2015</h3><p><strong>简单属性</strong>是原子的、不可再分割的，<strong>复合属性</strong>可以细分为更小的部分（即划分为别的属性）。</p>
+<h2 id="关系数据库中键的基本概念"><a href="#关系数据库中键的基本概念" class="headerlink" title="关系数据库中键的基本概念"></a>关系数据库中键的基本概念</h2><h3 id="2015-14"><a href="#2015-14" class="headerlink" title="2015"></a>2015</h3><p>关系数据库中，全码（All-key）指关系模型的所有属性组是这个关系模型的候选键。</p>
+<h2 id="关系数据库E-R模型的相关知识"><a href="#关系数据库E-R模型的相关知识" class="headerlink" title="关系数据库E-R模型的相关知识"></a>关系数据库E-R模型的相关知识</h2><h3 id="2015-15"><a href="#2015-15" class="headerlink" title="2015"></a>2015</h3><p><strong>多对多联系向关系模式的转换的规则是：</strong>多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的主键及联系的属性，关系的码是多方实体的主键构成的属性组。</p>
+<h2 id="数据表示基础知识"><a href="#数据表示基础知识" class="headerlink" title="数据表示基础知识"></a>数据表示基础知识</h2><h3 id="2014-1"><a href="#2014-1" class="headerlink" title="2014"></a>2014</h3><p>机器字长位n，最高位为标志位，则删除的n-1位用来表示数值，其最大是这n-1位都位都位1，也就是（2^（n-1）-1）。                                                                                        </p>
+<h1 id="数据库技术基础类"><a href="#数据库技术基础类" class="headerlink" title="数据库技术基础类"></a>数据库技术基础类</h1><h2 id="数据挖掘基础知识"><a href="#数据挖掘基础知识" class="headerlink" title="数据挖掘基础知识"></a>数据挖掘基础知识</h2><h3 id="2015-16"><a href="#2015-16" class="headerlink" title="2015"></a>2015</h3><p>可以说，数据挖掘是深层次的数据分析。从功能上可以将数据挖掘的分析方法划分为四种，即关联分析、序列模式分析、分析类分析和聚类分析。在时间应用的DM系统中，这四种方法有着不同的使用范围，因此经常被综合运用。</p>
+<ul>
+<li><p><strong>关联分析</strong>（Association）</p>
+<p>目的是挖掘出隐藏在数据间的相互关系。</p>
+</li>
+<li><p><strong>序列模式分析</strong>（Sequential Patterns）</p>
+<p>目的也是挖掘出隐藏在数据间的相互关系，它的侧重点在于分析数据间的前后关系（因果关系）。在进行序列模式分析时也因计算置信度和支持度。</p>
+</li>
+<li><p><strong>分类分析</strong>（Classifiers）</p>
+<p>和搜寻爱你为每一个记录赋予一个标记（一组具有不同特征的类别），即按标记分类记录，然后检查这些标记的记录，描述出这些记录的特性。</p>
+</li>
+<li><p><strong>聚类分析</strong>（Clustering）</p>
+<p>聚类分析法是分类分析法的逆过程，它的输入集是一组未标记的记录，即输入的记录没有任何处理。目的是根据一定的规则，合理地划分记录集合，并用显式或隐式的方法描述不同的类别。</p>
+</li>
+</ul>
+<h2 id="数据库模型的基础知识"><a href="#数据库模型的基础知识" class="headerlink" title="数据库模型的基础知识"></a>数据库模型的基础知识</h2><h3 id="2015-17"><a href="#2015-17" class="headerlink" title="2015"></a>2015</h3><p>概念模型是信息的描述方式，逻辑模型是数据的逻辑结构，数据模型是指数据的物理组织方式。逻辑模型（E-R图）中的联系描述的是实体间的关联关系，主要是现实世界的事件，包括参与者和事件自身的属性。在关系模型中，取参与联系的实体的码（唯一代表具体的参与者）和事件自身的属性，构成记录即关系的形式来描述。</p>
+<p>索引是为了提高查询效率而引入的机制。</p>
+<p>基于历史数据预测新数据所属的类型，类型已知，这就是一个典型的分类问题。</p>
+<p>贝叶斯信念网络是一个分类算法，Apriori是一个关联规则挖掘算法，K-means和EM都是聚类算法。</p>
+<p>K-means和DBSCAN是两个经典的聚类算法，将相似的数据对象归类一组，不相似的数据对象分开。K-means算法基于对象之间的聚类进行聚类，需要传入聚类的个数。DBSCAN算法基于密度进行聚类，需要确定阈值，两者的聚类结构均与输入参数关系很大。DBSCAN可以处理不同大小形状的簇，而K-means算法则不适用。若数据分布密度变化大，则这两种算法都不适用。</p>
+<h2 id="扩展E-R图的基础知识"><a href="#扩展E-R图的基础知识" class="headerlink" title="扩展E-R图的基础知识"></a>扩展E-R图的基础知识</h2><h3 id="2015-18"><a href="#2015-18" class="headerlink" title="2015"></a>2015</h3><p>派生属性是指可以由其他属性来获取的属性。</p>
+<h1 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h1><h2 id="数据库的基础知识"><a href="#数据库的基础知识" class="headerlink" title="数据库的基础知识"></a>数据库的基础知识</h2><h3 id="2015-19"><a href="#2015-19" class="headerlink" title="2015"></a>2015</h3><p><strong>数据字典</strong>（Data Dictionary，DD）是各类数据藐视的集合，它是关于数据库中数据的描述，即元数据，而不是数据本身。数据字典包括数据项、数据结构、数据流、数据存储和处理过程5个过程。其中“数据项”通常包括数据项名，数据项含义说明、别名、数据类型、长度、取值范围、取之含义、与其他数据项的逻辑关系。</p>
+<h2 id="数据库应用系统的基础知识"><a href="#数据库应用系统的基础知识" class="headerlink" title="数据库应用系统的基础知识"></a>数据库应用系统的基础知识</h2><h3 id="2015-20"><a href="#2015-20" class="headerlink" title="2015"></a>2015</h3><p>数据库的运行维护是由专门的数据库管理系统软件（DBMS）来负责的。C/S结构又称两层结构，由客户端运行应用程序；B/S结构分为三层，客户端只需要浏览器显示的简单的页面处理，Web服务器上的应用程序负责业务处理并与数据库交互。</p>
+<h1 id="事务管理类"><a href="#事务管理类" class="headerlink" title="事务管理类"></a>事务管理类</h1><h2 id="数据库事务处理方面的基础知识"><a href="#数据库事务处理方面的基础知识" class="headerlink" title="数据库事务处理方面的基础知识"></a>数据库事务处理方面的基础知识</h2><h3 id="2015-21"><a href="#2015-21" class="headerlink" title="2015"></a>2015</h3><p>并发事务如果不加以控制，会破坏事务的隔离性和一致性。控制的手段就是加锁，在事务执行时限制其他事务堆数据的读取。在并发控制中引入两种锁：排他锁（Exclusive Locks，简称X锁）和共享锁（Share Locks，简称S锁）。</p>
+<ul>
+<li><p><strong>排他锁</strong></p>
+<p>又称为写锁，用于对数据进行写操作时进行锁定。如果事务T对数据A加上X锁后，就只允许事务T读取和修改数据A，其他事务对数据A不能再加任何锁，从而也不能读取和修改数据A，直到事务T释放A上的锁。</p>
+</li>
+<li><p><strong>共享锁</strong></p>
+<p>又称为读锁，用于对数据进行数据读操作时进行锁定。如果事务T对数据A加上了S锁后，事务T就只能读数据A但不可以修改，其他事务可以再对数据A加S锁来读取，只要数据上有S锁，其他事务只能再对其加S锁读取而不能加X锁修改。</p>
+</li>
+</ul>
+<h2 id="事务程序的基础知识"><a href="#事务程序的基础知识" class="headerlink" title="事务程序的基础知识"></a>事务程序的基础知识</h2><h3 id="2015-22"><a href="#2015-22" class="headerlink" title="2015"></a>2015</h3><p>事务的结束语句是ROLLBACK和COMMIT，当事务执行中出错时，使用ROLLBACK对的当前事务对数据库已做的更新进行撤销；事务所有指令执行完成后，用COMMIT语句对数据库所做的更改提交。COMMITWORK 和 ROLLBACK WORK 中的WORK可省略。</p>
+<h2 id="事务调度知识"><a href="#事务调度知识" class="headerlink" title="事务调度知识"></a>事务调度知识</h2><h3 id="2015-23"><a href="#2015-23" class="headerlink" title="2015"></a>2015</h3><p>事务的执行由DBMS进行调度，在执行事务的过程中加入相关锁指令一控制事务满足ACID属性。常用的方式是两段锁协议（2PL）。即事务的加锁和解锁分为两个阶段，第一节阶段为锁增长阶段，只能加锁不能解锁，第二阶段为锁的减少阶段，只能解锁不能加锁。</p>
+<p>死锁的解除由DBMS来完成。需要在造成死锁的多个事务中选择一个回滚代价最小的事务进行强制回滚，并将该事务置于事务队列稍后执行。</p>
+<h2 id="数据库恢复的基础知识"><a href="#数据库恢复的基础知识" class="headerlink" title="数据库恢复的基础知识"></a>数据库恢复的基础知识</h2><h3 id="2015-24"><a href="#2015-24" class="headerlink" title="2015"></a>2015</h3><p>数据库故障会造成数据不一致。数据库的更新是由事务驱动的，事务的ACID属性被破坏的数据不一致的根本原因。系统重启会使内存中更新过的数据未写入硬盘而丢失，破坏了事务的持久性，即事务一经提交，其对数据库的运影响会体现在数据库中。</p>
+<p>为了保证事务发生故障后可恢复，DBMS使用日志。即在对数据更新前，现将欲做的修改在日志中记录并写入硬盘，然后再进行数据更新。当系统重启时，根据日志文件对数据进行恢复。</p>
+<h1 id="数据库主流应用技术类"><a href="#数据库主流应用技术类" class="headerlink" title="数据库主流应用技术类"></a>数据库主流应用技术类</h1><h2 id="面向对象数据库的基础知识"><a href="#面向对象数据库的基础知识" class="headerlink" title="面向对象数据库的基础知识"></a>面向对象数据库的基础知识</h2><h3 id="2015-25"><a href="#2015-25" class="headerlink" title="2015"></a>2015</h3><p>面向对象数据库中的数据模型充分利用了面向对象的核心概念。一个对象通常对应实际领域的一个实体，有唯一的标识，即对象标识OID。但是对用户而言，OID不可以修改。</p>
+<h1 id="非关系型数据库类"><a href="#非关系型数据库类" class="headerlink" title="非关系型数据库类"></a>非关系型数据库类</h1><h2 id="NoSQL的相关知识"><a href="#NoSQL的相关知识" class="headerlink" title="NoSQL的相关知识"></a>NoSQL的相关知识</h2><h3 id="2015-26"><a href="#2015-26" class="headerlink" title="2015"></a>2015</h3><p>NoSQL是指非关系型数据库，是不同于传统的关系型数据库DBMS的统称。有几种典型的NoSQL数据库：</p>
+<ul>
+<li><p><strong>文档存储数据库</strong></p>
+<p>是指一文档为存储信息的基本单位，如BaseX、CouchDB、MongoDB等。</p>
+</li>
+<li><p><strong>键值存储数据库</strong></p>
+<p>支持简单的键值存储和提取，具有极高的并发读写能力，如Dynamo、Memcached、Redis等。</p>
+</li>
+<li><p><strong>图形存储数据库</strong></p>
+<p>利用计算机将点、线、面等图形基本元素按照一定的数据结构进行存储，如FlockDB、Neo4j等。</p>
+</li>
+</ul>
+<p>多值数据库系统是一种分布式数据库系统，提供了一个通用的数据集成与访问平台，屏蔽了各种数据库系统不同的访问方式和用户界面，给用户呈现出一个访问多种数据库的公共接口。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%B7%A5/">-数工</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%A7%E7%BA%B2/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">数工 知识点大纲</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/08/%E6%95%B0%E5%B7%A5%EF%BC%88%E5%85%AD%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">数工（六）数据库技术基础</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/04/06/数工（一）计算机系统知识/" title="数工（一）计算机系统知识"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-06</div><div class="title">数工（一）计算机系统知识</div></div></a></div><div><a href="/2021/04/07/数工（二）程序设计语言/" title="数工（二）程序设计语言"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-07</div><div class="title">数工（二）程序设计语言</div></div></a></div><div><a href="/2021/04/08/数工（六）数据库技术基础/" title="数工（六）数据库技术基础"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-08</div><div class="title">数工（六）数据库技术基础</div></div></a></div><div><a href="/2021/04/14/数工 计算机系统精华知识点/" title="数工 计算机系统精华知识点"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-14</div><div class="title">数工 计算机系统精华知识点</div></div></a></div><div><a href="/2021/04/13/数工 知识点大纲/" title="数工 知识点大纲"><img class="cover" src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-13</div><div class="title">数工 知识点大纲</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/background.jpg" onerror="this.onerror=null;this.src='/img/touxiang.png'" alt="avatar"/><div class="author-info__name">JOEL-T99</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">43</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JOEL-T99"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JOEL-T99" target="_blank" title="Github"><i class="fa fa-github"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">感谢访问本站，若喜欢请收藏 ^_^</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">计算机操作类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%AF%86"><span class="toc-number">1.1.</span> <span class="toc-text">计算机系统基础常识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015"><span class="toc-number">1.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text">计算机系统基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">2015</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2014"><span class="toc-number">1.2.2.</span> <span class="toc-text">2014</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.3.</span> <span class="toc-text">计算机组成原理的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.4.</span> <span class="toc-text">计算机系统结构基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-3"><span class="toc-number">1.4.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">网络安全类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.1.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-4"><span class="toc-number">2.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.2.</span> <span class="toc-text">URL的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-5"><span class="toc-number">2.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP%E5%92%8CFTP%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%BA%94%E7%94%A8%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.3.</span> <span class="toc-text">DHCP和FTP的两个应用协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-6"><span class="toc-number">2.3.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">知识产权类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-7"><span class="toc-number">3.0.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">软件工程类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">4.1.</span> <span class="toc-text">软件工程的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-8"><span class="toc-number">4.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">4.2.</span> <span class="toc-text">软件项目管理的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-9"><span class="toc-number">4.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">程序语言类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">5.1.</span> <span class="toc-text">程序语言基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-10"><span class="toc-number">5.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">5.2.</span> <span class="toc-text">软件过程模型的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-11"><span class="toc-number">5.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%92%8C%E8%BF%90%E8%A1%8C%E7%B1%BB"><span class="toc-number">6.</span> <span class="toc-text">系统开发和运行类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%BA%94%E7%94%A8"><span class="toc-number">6.1.</span> <span class="toc-text">数据流图的概念和应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-12"><span class="toc-number">6.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB"><span class="toc-number">7.</span> <span class="toc-text">关系数据库类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">7.1.</span> <span class="toc-text">关系数据库基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-13"><span class="toc-number">7.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E9%94%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">7.2.</span> <span class="toc-text">关系数据库中键的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-14"><span class="toc-number">7.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93E-R%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">7.3.</span> <span class="toc-text">关系数据库E-R模型的相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-15"><span class="toc-number">7.3.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">7.4.</span> <span class="toc-text">数据表示基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2014-1"><span class="toc-number">7.4.1.</span> <span class="toc-text">2014</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%B1%BB"><span class="toc-number">8.</span> <span class="toc-text">数据库技术基础类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">8.1.</span> <span class="toc-text">数据挖掘基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-16"><span class="toc-number">8.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">8.2.</span> <span class="toc-text">数据库模型的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-17"><span class="toc-number">8.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95E-R%E5%9B%BE%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">8.3.</span> <span class="toc-text">扩展E-R图的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-18"><span class="toc-number">8.3.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="toc-number">9.</span> <span class="toc-text">数据库设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">9.1.</span> <span class="toc-text">数据库的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-19"><span class="toc-number">9.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">9.2.</span> <span class="toc-text">数据库应用系统的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-20"><span class="toc-number">9.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86%E7%B1%BB"><span class="toc-number">10.</span> <span class="toc-text">事务管理类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86%E6%96%B9%E9%9D%A2%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">10.1.</span> <span class="toc-text">数据库事务处理方面的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-21"><span class="toc-number">10.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">10.2.</span> <span class="toc-text">事务程序的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-22"><span class="toc-number">10.2.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E8%B0%83%E5%BA%A6%E7%9F%A5%E8%AF%86"><span class="toc-number">10.3.</span> <span class="toc-text">事务调度知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-23"><span class="toc-number">10.3.1.</span> <span class="toc-text">2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">10.4.</span> <span class="toc-text">数据库恢复的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-24"><span class="toc-number">10.4.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%BB%E6%B5%81%E5%BA%94%E7%94%A8%E6%8A%80%E6%9C%AF%E7%B1%BB"><span class="toc-number">11.</span> <span class="toc-text">数据库主流应用技术类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">11.1.</span> <span class="toc-text">面向对象数据库的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-25"><span class="toc-number">11.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB"><span class="toc-number">12.</span> <span class="toc-text">非关系型数据库类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NoSQL%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">12.1.</span> <span class="toc-text">NoSQL的相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2015-26"><span class="toc-number">12.1.1.</span> <span class="toc-text">2015</span></a></li></ol></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/22/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%89%E5%85%A8%E8%AF%A6%E6%83%85/" title="IE浏览器安全详情"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="IE浏览器安全详情"/></a><div class="content"><a class="title" href="/2021/04/22/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%89%E5%85%A8%E8%AF%A6%E6%83%85/" title="IE浏览器安全详情">IE浏览器安全详情</a><time datetime="2021-04-22T03:58:23.000Z" title="Created 2021-04-22 11:58:23">2021-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/14/%E6%95%B0%E5%B7%A5%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%B2%BE%E5%8D%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" title="数工 计算机系统精华知识点"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工 计算机系统精华知识点"/></a><div class="content"><a class="title" href="/2021/04/14/%E6%95%B0%E5%B7%A5%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%B2%BE%E5%8D%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" title="数工 计算机系统精华知识点">数工 计算机系统精华知识点</a><time datetime="2021-04-14T07:52:32.000Z" title="Created 2021-04-14 15:52:32">2021-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%A7%E7%BA%B2/" title="数工 知识点大纲"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工 知识点大纲"/></a><div class="content"><a class="title" href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%A7%E7%BA%B2/" title="数工 知识点大纲">数工 知识点大纲</a><time datetime="2021-04-13T09:44:39.000Z" title="Created 2021-04-13 17:44:39">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9C%9F%E9%A2%98%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/" title="数工 真题考点总结"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工 真题考点总结"/></a><div class="content"><a class="title" href="/2021/04/13/%E6%95%B0%E5%B7%A5%20%E7%9C%9F%E9%A2%98%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/" title="数工 真题考点总结">数工 真题考点总结</a><time datetime="2021-04-12T18:34:16.000Z" title="Created 2021-04-13 02:34:16">2021-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/08/%E6%95%B0%E5%B7%A5%EF%BC%88%E5%85%AD%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="数工（六）数据库技术基础"><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/chris-barbalis-TwbtY3p-6JU-unsplash.jpg" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/science.png'" alt="数工（六）数据库技术基础"/></a><div class="content"><a class="title" href="/2021/04/08/%E6%95%B0%E5%B7%A5%EF%BC%88%E5%85%AD%EF%BC%89%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" title="数工（六）数据库技术基础">数工（六）数据库技术基础</a><time datetime="2021-04-08T09:42:03.000Z" title="Created 2021-04-08 17:42:03">2021-04-08</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/index.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By JOEL-T99</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="http://joel-t99.online/">Blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script></div></body></html>
