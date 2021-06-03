@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-06-03T13:58:13.276Z</updated>
+  <updated>2021-06-03T14:44:26.682Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2021/06/03/Python-Seaborn/"/>
     <id>http://yoursite.com/2021/06/03/Python-Seaborn/</id>
     <published>2021-06-03T13:57:32.000Z</published>
-    <updated>2021-06-03T13:58:13.276Z</updated>
+    <updated>2021-06-03T14:44:26.682Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Seaborn-样式"><a href="#Seaborn-样式" class="headerlink" title="Seaborn 样式"></a>Seaborn 样式</h1><ul><li><p><strong>设置Style、Context的三种方法：</strong></p><ul><li>set  ：通用设置接口</li><li>set_style  ： 专用设置接口，设置后全局随之改变</li><li>axes_style  ：设置当前图（axes级），同时返回设置后的系列参数，支持with关键字用法。</li></ul></li><li><p><strong>Style:</strong></p><ul><li>darkgrid  :  默认风格</li><li>dark  :</li><li>whitegrid  :</li><li>white. :</li><li>ticks  :</li></ul></li></ul><p>style对比图：</p><p><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/seabornstyle.png"></p><ul><li><strong>context:</strong><ul><li>notebook  ：默认环境</li><li>paper</li><li>talk</li><li>poster</li></ul></li></ul><p>context对比图：</p><p><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/seaborncontext.png"></p><ul><li><strong>Color：</strong><ul><li>color_palett  ：基于RGB原理设置颜色的接口，可接收一个调色板对象作为参数，同时可以设置颜色数量。</li><li>hls_palett  ： 基于Hue(色相)、Luminance(亮度)、Saturation(饱和度)原理设置颜色的接口，除了颜色数量参数外，另外3个重要参数即是hls。</li></ul></li></ul><p>Color对比图</p><p><img src="https://cdn.jsdelivr.net/gh/JOEL-T99/Pic//img/seaborncolor.png"></p>]]></content>
     
     
       
