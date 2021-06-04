@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2021/06/03/Python-Matplotlib/</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/06/03/Python-Seaborn/</loc>
     
     <lastmod>2021-06-04</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2020/11/13/Hexo-Typora-%E5%86%99%E5%87%BA%E5%BD%A9%E8%89%B2%E5%AD%97%E4%BD%93/</loc>
     
     <lastmod>2021-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2021/06/03/Python-Matplotlib/</loc>
-    
-    <lastmod>2021-06-03</lastmod>
     
   </url>
   
