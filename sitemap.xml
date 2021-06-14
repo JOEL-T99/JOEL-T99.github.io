@@ -2,14 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2021/06/14/Seaborn-Distribution-plots/</loc>
+    <loc>http://yoursite.com/2021/06/14/Seaborn-Multi-plot-grids/</loc>
     
     <lastmod>2021-06-14</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2021/06/14/Seaborn-Relational-plots/</loc>
+    <loc>http://yoursite.com/2021/06/14/Seaborn-Matrix-plots/</loc>
+    
+    <lastmod>2021-06-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/06/14/Seaborn-Distribution-plots/</loc>
     
     <lastmod>2021-06-14</lastmod>
     
@@ -23,21 +30,14 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2021/06/14/Seaborn-Relational-plots/</loc>
+    
+    <lastmod>2021-06-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/06/14/Seaborn-Regression-plots/</loc>
-    
-    <lastmod>2021-06-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2021/06/14/Seaborn-Multi-plot-grids/</loc>
-    
-    <lastmod>2021-06-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2021/06/14/Seaborn-Matrix-plots/</loc>
     
     <lastmod>2021-06-14</lastmod>
     
